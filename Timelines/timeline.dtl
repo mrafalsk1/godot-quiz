@@ -1,0 +1,12 @@
+[background arg="res://Backgrounds/Classroom 2.png" fade="0.0"]
+join character 1
+character (talking): dsadsa
+- Matemática
+	character (talking): top de linha
+	- Matemática
+		set {elective} = "Matemática"
+		leave character
+		jump classroom/
+- Português
+	- Teste
+[end_timeline]
