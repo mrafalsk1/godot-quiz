@@ -1,14 +1,36 @@
 {
   "MATHEMATICS": {
-    "ALGEBRA": {
-      "question": "QUESTÃO FODA FODA FODA FODA",
-      "options": [
-        "opção C burro",
-        "opção c burro",
-        "hahahh otário é a d",
-        "acerto"
-      ],
-      "correctOptionIndex": 3
-    }
+	"ALGEBRA": [
+	  {
+		"question": "QUESTÃO FODA   ",
+		"options": [
+		  "opção C burro",
+		  "opção c burro",
+		  "hahahh otário é a d",
+		  "acerto"
+		],
+		"correct_option_index": 1
+	  },
+	  {
+		"question": "QUESTÃO FODA   FODA",
+		"options": [
+		  "opção C burro blal ",
+		  "opção c burro",
+		  "hahahh otário é a d",
+		  "acerto"
+		],
+		"correct_option_index": 2
+	  },
+	  {
+		"question": "QUESTÃO FODA  FODA FODA",
+		"options": [
+		  "opção C burro",
+		  "opção c burro çdfsmlmkasmkf",
+		  "hahahh otário é a d",
+		  "acerto"
+		],
+		"correct_option_index": 3
+	  }
+	]
   }
 }

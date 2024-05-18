@@ -2,9 +2,10 @@
 join character 1
 character (talking): dsadsa
 - Matemática
+	set {parent_elective} = "MATHEMATICS"
 	character (talking): top de linha
 	- Matemática
-		set {elective} = "Matemática"
+		set {elective} = "ALGEBRA"
 		leave character
 		jump classroom/
 - Português

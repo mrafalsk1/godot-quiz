@@ -30,7 +30,8 @@ directories/dtl_directory={
 }
 glossary/default_case_sensitive=true
 variables={
-"elective": ""
+"elective": "",
+"parent_elective": ""
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -53,7 +54,7 @@ layout/default_style="Default"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gdscript_formatter/plugin.cfg")
 
 [input]
 
