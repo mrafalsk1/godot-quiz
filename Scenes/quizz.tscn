@@ -12,13 +12,22 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -4.0
-offset_right = 3.0
-offset_bottom = -4.0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 5.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ee8pf")
+
+[node name="TimerLabel" type="Label" parent="."]
+z_index = 1
+offset_left = 88.0
+offset_top = 60.0
+offset_right = 335.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 29
+text = "sdadsa"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -65,3 +74,12 @@ text = "sdfsdf"
 [node name="Option4" type="Button" parent="VBoxContainer/Options"]
 layout_mode = 2
 text = "fdsfdsfds"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 360.107
+
+[connection signal="pressed" from="VBoxContainer/Options/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options/Option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options/Option4" to="." method="_on_option_4_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

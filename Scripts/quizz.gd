@@ -1,9 +1,16 @@
 extends Control
 const Electives = preload("res://Scripts/enums/electives.gd")
+const TIMER_SECONDS = 30
 
-var current_questions = 0
+var current_question = {
+	"index": -1,
+	"correct_option_index": -1
+}
+var questions: Array[Elective] = []
 @onready var options = $VBoxContainer/Options
 @onready var question = $VBoxContainer/Question
+@onready var timer = $Timer
+@onready var timer_label = $TimerLabel
 
 
 
@@ -12,33 +19,75 @@ func _ready():
 	var selected_parent_elective: String = Dialogic.VAR.parent_elective
 	if not selected_elective or not selected_parent_elective:
 		return
-	
-	print("quiz game variavle MUTIO FODA")
-	print(selected_elective)
-	print(Electives.ELECTIVE_NAMES.values())
-	
-	#var elective_index =  Electives.ELECTIVE_NAMES.values().find(selected_elective)
-	#if elective_index == -1:
-		#return
-	
-	#var elective_name = Electives.ELECTIVE_NAMES.values().find(selected_elective)
-	#var elective = Electives.ELECTIVE_NAMES.keys()[elective_name]
 	load_questions(selected_elective,selected_parent_elective)
+	reset_timer()
+	
+func _process(delta):
+	print(timer.time_left)
+	timer_label.text = "%s" % roundf(timer.time_left)
+
+func reset_timer():
+	timer.start(TIMER_SECONDS)
+	
 func load_questions(elective: String, parent_elective: String):
-	var questions = Electives.get_elective_questions(elective,parent_elective)
+	questions = Electives.get_elective_questions(elective,parent_elective)
+	current_question["index"] = 0
+	current_question["correct_option_index"] = questions[0].correct_option_index
 	change_question(questions[0])
-	print(questions)
-	print(questions[0]["question"])
-		
 #
-#func next_question():
+func next_question():
+	var current_question_index = current_question["index"]
+	## acabou as questãa ;P
+	print(current_question_index)
+	if current_question_index >= questions.size() - 1:
+		## TODO change to scenarioa end quizz
+		return
+		
+		
+	var elective: Elective = questions[current_question_index + 1]
+	current_question["index"] = current_question_index + 1
+	current_question["correct_option_index"] = questions[current_question_index + 1].correct_option_index
+	change_question(elective)
 
 func change_question(elective: Elective):
-	print(elective)
 	question.text = elective.question
 	var buttons = options.get_children()	
 	for idx in range(buttons.size()):
-
 		var b = buttons[idx]
 		b.text = elective.options[idx]
-		print(b.text)
+
+	reset_timer()
+
+func handle_answer_question(selected_answer_index: int):
+	if selected_answer_index == current_question["correct_option_index"]:
+		## TODO feedbacks 
+		print("acerto mizerávi")
+	else:
+		print("erro")
+	next_question()
+	
+
+func _on_option_1_pressed():
+	handle_answer_question(0)
+	pass # Replace with function body.
+
+
+func _on_option_2_pressed():
+	handle_answer_question(1)
+	pass # Replace with function body.
+
+
+func _on_option_3_pressed():
+	handle_answer_question(2)
+	pass # Replace with function body.
+
+
+func _on_option_4_pressed():
+	handle_answer_question(3)
+	pass # Replace with function body.
+
+
+func _on_timer_timeout():
+	handle_answer_question(-1)
+	
+	pass # Replace with function body.
