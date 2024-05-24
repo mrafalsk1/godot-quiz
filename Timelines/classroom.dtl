@@ -1,3 +1,5 @@
 [background arg="res://Backgrounds/Classroom 4.png" fade="0.0"]
 join character 1
 character (talking): Olá
+label fdsfdsfsd
+[signal arg="start_quiz"]

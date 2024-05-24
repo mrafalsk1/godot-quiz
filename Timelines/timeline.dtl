@@ -4,7 +4,7 @@ character (talking): dsadsa
 - Matemática
 	set {parent_elective} = "MATHEMATICS"
 	character (talking): top de linha
-	- Matemática
+	- algebra
 		set {elective} = "ALGEBRA"
 		leave character
 		jump classroom/

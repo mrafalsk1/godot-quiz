@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dubq7ajd1m2ar"]
+[gd_scene load_steps=6 format=3 uid="uid://dubq7ajd1m2ar"]
 
 [ext_resource type="PackedScene" uid="uid://buu8y0j8kvbh2" path="res://Scenes/menu.tscn" id="1_g55fv"]
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_n5iaa"]
 [ext_resource type="Script" path="res://Scripts/TimelineManager.gd" id="3_as0s8"]
+[ext_resource type="PackedScene" uid="uid://dmabr1ke7dvhr" path="res://Scenes/quizz.tscn" id="4_y6kqe"]
+[ext_resource type="PackedScene" uid="uid://bi56savh3royf" path="res://Scenes/show_results.tscn" id="5_y8kqu"]
 
 [node name="Game" type="Node2D"]
 
@@ -15,4 +17,9 @@ script = ExtResource("1_n5iaa")
 [node name="TimelineManager" type="Node" parent="."]
 script = ExtResource("3_as0s8")
 
+[node name="Quizz" parent="." instance=ExtResource("4_y6kqe")]
+
+[node name="ShowResults" parent="." instance=ExtResource("5_y8kqu")]
+
 [connection signal="game_started" from="GameManager" to="TimelineManager" method="_on_game_manager_game_started"]
+[connection signal="end_quiz" from="Quizz" to="ShowResults" method="_on_quizz_end_quiz"]

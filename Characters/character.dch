@@ -17,11 +17,12 @@
 "portraits": {
 "talking": {
 "export_overrides": {
-"image": "\"res://Characters/teste.png\""
+"image": "\"res://Characters/teste-removebg-preview.png\""
 },
-"mirror": false,
+"ignore_char_scale": false,
+"mirror": true,
 "offset": Vector2(0, 0),
-"scale": 1,
+"scale": 1.0,
 "scene": ""
 }
 },

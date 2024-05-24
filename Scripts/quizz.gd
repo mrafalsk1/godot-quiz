@@ -1,4 +1,5 @@
 extends Control
+
 const Electives = preload("res://Scripts/enums/electives.gd")
 const TIMER_SECONDS = 30
 
@@ -13,17 +14,14 @@ var questions: Array[Elective] = []
 @onready var timer_label = $TimerLabel
 
 
-
 func _ready():
 	var selected_elective: String = Dialogic.VAR.elective
 	var selected_parent_elective: String = Dialogic.VAR.parent_elective
 	if not selected_elective or not selected_parent_elective:
 		return
 	load_questions(selected_elective,selected_parent_elective)
-	reset_timer()
 	
 func _process(delta):
-	print(timer.time_left)
 	timer_label.text = "%s" % roundf(timer.time_left)
 
 func reset_timer():
@@ -40,6 +38,8 @@ func next_question():
 	## acabou as questãa ;P
 	print(current_question_index)
 	if current_question_index >= questions.size() - 1:
+		print("ACABO")
+		Dialogic.signal_event.emit("end_quiz")
 		## TODO change to scenarioa end quizz
 		return
 		
@@ -60,7 +60,9 @@ func change_question(elective: Elective):
 
 func handle_answer_question(selected_answer_index: int):
 	if selected_answer_index == current_question["correct_option_index"]:
-		## TODO feedbacks 
+		## TODO feedbacks 	
+		const CORRECT_ANSWER_SCORE = 100
+		Game.add_score(CORRECT_ANSWER_SCORE * (timer.time_left / 10))
 		print("acerto mizerávi")
 	else:
 		print("erro")

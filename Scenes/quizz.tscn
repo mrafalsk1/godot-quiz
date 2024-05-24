@@ -20,15 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ee8pf")
 
-[node name="TimerLabel" type="Label" parent="."]
-z_index = 1
-offset_left = 88.0
-offset_top = 60.0
-offset_right = 335.0
-offset_bottom = 100.0
-theme_override_font_sizes/font_size = 29
-text = "sdadsa"
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -39,6 +30,15 @@ grow_vertical = 2
 texture = ExtResource("2_sktu4")
 expand_mode = 2
 metadata/_edit_lock_ = true
+
+[node name="TimerLabel" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1050.0
+offset_top = 1.0
+offset_right = 1148.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 29
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
