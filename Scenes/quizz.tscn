@@ -1,21 +1,51 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmabr1ke7dvhr"]
+[gd_scene load_steps=11 format=3 uid="uid://dmabr1ke7dvhr"]
 
 [ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_ee8pf"]
 [ext_resource type="Texture2D" uid="uid://b8g8bblfndv3a" path="res://Backgrounds/Classroom 2.png" id="2_sktu4"]
+[ext_resource type="Theme" uid="uid://dk2i3jjhjxx6t" path="res://assets/tema-opcao-questao/opcao.tres" id="3_le6gn"]
+[ext_resource type="Texture2D" uid="uid://3m7r5obal4hx" path="res://Characters/teste-removebg-preview.png" id="3_srijw"]
+[ext_resource type="Texture2D" uid="uid://cbf0y8xt7c516" path="res://Characters/normal.png" id="4_ncqo6"]
+
+[sub_resource type="Theme" id="Theme_qj3iq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f42d"]
+bg_color = Color(0.956863, 0.980392, 0.996078, 1)
+border_color = Color(0.898039, 0.819608, 0.917647, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_duwun"]
+default_font_size = 20
+Label/colors/font_color = Color(0.0196078, 0.0823529, 0.101961, 1)
+Label/styles/normal = SubResource("StyleBoxFlat_4f42d")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rm1e"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.980392, 0.980392, 0.980392, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [sub_resource type="LabelSettings" id="LabelSettings_ojmlb"]
-font_size = 40
-outline_size = 4
+line_spacing = 2.0
+font_size = 20
+font_color = Color(0, 0, 0, 1)
 
 [node name="Quizz" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = 2.0
-offset_right = 5.0
-offset_bottom = 2.0
+offset_left = -10.0
+offset_top = 77.0
+offset_right = -10.0
+offset_bottom = 77.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ee8pf")
@@ -45,38 +75,67 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -77.5
-offset_right = 77.5
-offset_bottom = 195.0
+offset_left = -22.0
+offset_top = 147.0
+offset_right = 504.0
+offset_bottom = 497.0
 grow_horizontal = 2
+theme = SubResource("Theme_qj3iq")
+theme_override_constants/separation = 10
 
-[node name="Question" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_duwun")
+theme_override_colors/font_color = Color(0.0156863, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "questão"
+theme_override_styles/normal = SubResource("StyleBoxFlat_2rm1e")
+text = "BuzzFeed
+Você sabe que viciou em testes do BuzzFeed quando até mesmo estes fazem sentido."
 label_settings = SubResource("LabelSettings_ojmlb")
+autowrap_mode = 1
 
 [node name="Options" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 10
 
 [node name="Option1" type="Button" parent="VBoxContainer/Options"]
 layout_mode = 2
+theme = ExtResource("3_le6gn")
 text = "dasd"
+icon = ExtResource("4_ncqo6")
+expand_icon = true
 
 [node name="Option2" type="Button" parent="VBoxContainer/Options"]
 layout_mode = 2
+theme = ExtResource("3_le6gn")
 text = "fdsfds"
+icon = ExtResource("4_ncqo6")
+expand_icon = true
 
 [node name="Option3" type="Button" parent="VBoxContainer/Options"]
 layout_mode = 2
+theme = ExtResource("3_le6gn")
 text = "sdfsdf"
+icon = ExtResource("4_ncqo6")
+expand_icon = true
 
 [node name="Option4" type="Button" parent="VBoxContainer/Options"]
 layout_mode = 2
+theme = ExtResource("3_le6gn")
 text = "fdsfdsfds"
+icon = ExtResource("4_ncqo6")
+expand_icon = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 360.107
+
+[node name="moca" type="Sprite2D" parent="."]
+position = Vector2(276.75, 405.5)
+scale = Vector2(0.91844, 0.825424)
+texture = ExtResource("3_srijw")
 
 [connection signal="pressed" from="VBoxContainer/Options/Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options/Option2" to="." method="_on_option_2_pressed"]
