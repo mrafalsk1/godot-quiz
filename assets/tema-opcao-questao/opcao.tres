@@ -1,4 +1,6 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dk2i3jjhjxx6t"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dk2i3jjhjxx6t"]
+
+[ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="1_ejlqq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5jro"]
 content_margin_left = 5.0
@@ -15,4 +17,5 @@ anti_aliasing_size = 0.01
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_ejlqq")
 Button/styles/normal = SubResource("StyleBoxFlat_k5jro")

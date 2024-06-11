@@ -1,12 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmabr1ke7dvhr"]
+[gd_scene load_steps=15 format=3 uid="uid://dmabr1ke7dvhr"]
 
 [ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_ee8pf"]
-[ext_resource type="Texture2D" uid="uid://b8g8bblfndv3a" path="res://Backgrounds/Classroom 2.png" id="2_sktu4"]
+[ext_resource type="Texture2D" uid="uid://b78a58ro2rreq" path="res://Backgrounds/class-quizz.jpg" id="2_lqrs4"]
+[ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="3_dbgbg"]
 [ext_resource type="Theme" uid="uid://dk2i3jjhjxx6t" path="res://assets/tema-opcao-questao/opcao.tres" id="3_le6gn"]
 [ext_resource type="Texture2D" uid="uid://3m7r5obal4hx" path="res://Characters/teste-removebg-preview.png" id="3_srijw"]
 [ext_resource type="Texture2D" uid="uid://cbf0y8xt7c516" path="res://Characters/normal.png" id="4_ncqo6"]
+[ext_resource type="Texture2D" uid="uid://cr6fnstdpqf4p" path="res://assets/icones/number-one-13265.png" id="5_83q55"]
+[ext_resource type="Texture2D" uid="uid://c5nf6htdbeh6w" path="res://assets/icones/Number_2_free_icons_designed_by_Hight_Quality_Icons-removebg-preview.png" id="6_g7myu"]
+[ext_resource type="Texture2D" uid="uid://bks0o6315d6u2" path="res://assets/icones/image-removebg-preview.png" id="7_p5qk5"]
 
-[sub_resource type="Theme" id="Theme_qj3iq"]
+[sub_resource type="Theme" id="Theme_yq7eb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f42d"]
 bg_color = Color(0.956863, 0.980392, 0.996078, 1)
@@ -19,14 +23,15 @@ corner_radius_bottom_left = 15
 [sub_resource type="Theme" id="Theme_duwun"]
 default_font_size = 20
 Label/colors/font_color = Color(0.0196078, 0.0823529, 0.101961, 1)
+Label/fonts/font = ExtResource("3_dbgbg")
 Label/styles/normal = SubResource("StyleBoxFlat_4f42d")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rm1e"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 10.0
-content_margin_bottom = 10.0
-bg_color = Color(0.980392, 0.980392, 0.980392, 1)
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.74902, 0.886275, 0.945098, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -42,10 +47,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -10.0
-offset_top = 77.0
-offset_right = -10.0
-offset_bottom = 77.0
+offset_left = -4.0
+offset_top = -10.0
+offset_right = -4.0
+offset_bottom = -10.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ee8pf")
@@ -57,7 +62,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sktu4")
+texture = ExtResource("2_lqrs4")
 expand_mode = 2
 metadata/_edit_lock_ = true
 
@@ -71,19 +76,20 @@ offset_bottom = 41.0
 theme_override_font_sizes/font_size = 29
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 2.08165e-12)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -22.0
-offset_top = 147.0
-offset_right = 504.0
+offset_left = -88.0
+offset_top = 185.0
+offset_right = 459.0
 offset_bottom = 497.0
 grow_horizontal = 2
-theme = SubResource("Theme_qj3iq")
+theme = SubResource("Theme_yq7eb")
 theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Question" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 2
 size_flags_vertical = 6
@@ -92,8 +98,7 @@ theme = SubResource("Theme_duwun")
 theme_override_colors/font_color = Color(0.0156863, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_2rm1e")
-text = "BuzzFeed
-Você sabe que viciou em testes do BuzzFeed quando até mesmo estes fazem sentido."
+text = "teste teste teste"
 label_settings = SubResource("LabelSettings_ojmlb")
 autowrap_mode = 1
 
@@ -105,21 +110,21 @@ theme_override_constants/separation = 10
 layout_mode = 2
 theme = ExtResource("3_le6gn")
 text = "dasd"
-icon = ExtResource("4_ncqo6")
+icon = ExtResource("5_83q55")
 expand_icon = true
 
 [node name="Option2" type="Button" parent="VBoxContainer/Options"]
 layout_mode = 2
 theme = ExtResource("3_le6gn")
 text = "fdsfds"
-icon = ExtResource("4_ncqo6")
+icon = ExtResource("6_g7myu")
 expand_icon = true
 
 [node name="Option3" type="Button" parent="VBoxContainer/Options"]
 layout_mode = 2
 theme = ExtResource("3_le6gn")
 text = "sdfsdf"
-icon = ExtResource("4_ncqo6")
+icon = ExtResource("7_p5qk5")
 expand_icon = true
 
 [node name="Option4" type="Button" parent="VBoxContainer/Options"]
@@ -133,8 +138,8 @@ expand_icon = true
 wait_time = 360.107
 
 [node name="moca" type="Sprite2D" parent="."]
-position = Vector2(276.75, 405.5)
-scale = Vector2(0.91844, 0.825424)
+position = Vector2(179, 425)
+scale = Vector2(0.826241, 0.764407)
 texture = ExtResource("3_srijw")
 
 [connection signal="pressed" from="VBoxContainer/Options/Option1" to="." method="_on_option_1_pressed"]

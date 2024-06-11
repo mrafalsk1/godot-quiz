@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ywj74k5tivqy"
-path="res://.godot/imported/icone-ocao-1.svg-aff0d3d73bbd5ca320123812efd1c91b.ctex"
+uid="uid://c5nf6htdbeh6w"
+path="res://.godot/imported/Number_2_free_icons_designed_by_Hight_Quality_Icons-removebg-preview.png-f41704c1153c7e9af41d13ae0587de7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icones/icone-ocao-1.svg"
-dest_files=["res://.godot/imported/icone-ocao-1.svg-aff0d3d73bbd5ca320123812efd1c91b.ctex"]
+source_file="res://assets/icones/Number_2_free_icons_designed_by_Hight_Quality_Icons-removebg-preview.png"
+dest_files=["res://.godot/imported/Number_2_free_icons_designed_by_Hight_Quality_Icons-removebg-preview.png-f41704c1153c7e9af41d13ae0587de7d.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

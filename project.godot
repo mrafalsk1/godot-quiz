@@ -53,6 +53,12 @@ text/autopauses={}
 layout/style_list=[]
 layout/default_style="Default"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/gdscript_formatter/plugin.cfg")
