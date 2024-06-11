@@ -8,5 +8,6 @@ character (talking): dsadsa
 		set {elective} = "ALGEBRA"
 - Português
 	- Teste
+	leave character
 leave character
-[end_timeline]
+[signal arg="start_quiz"]

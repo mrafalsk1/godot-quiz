@@ -33,7 +33,6 @@ theme = SubResource("Theme_1vbhj")
 text = "Play"
 
 [node name="RankButton" type="Button" parent="."]
-layout_mode = 0
 offset_left = 195.0
 offset_top = 366.0
 offset_right = 388.0
@@ -44,3 +43,4 @@ text = "Rank
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="RankButton" to="." method="_on_rank_button_pressed"]
+[connection signal="pressed" from="RankButton" to="." method="_on_button_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmabr1ke7dvhr"]
 
-[ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_ee8pf"]
-[ext_resource type="Texture2D" uid="uid://b8g8bblfndv3a" path="res://Backgrounds/Classroom 2.png" id="2_sktu4"]
+[ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_ec6yb"]
+[ext_resource type="Texture2D" uid="uid://b8g8bblfndv3a" path="res://Backgrounds/Classroom 2.png" id="2_pokji"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ojmlb"]
 font_size = 40
@@ -18,7 +18,7 @@ offset_right = 5.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ee8pf")
+script = ExtResource("1_ec6yb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -27,7 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_sktu4")
+texture = ExtResource("2_pokji")
 expand_mode = 2
 metadata/_edit_lock_ = true
 
