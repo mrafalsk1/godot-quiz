@@ -1,5 +1,4 @@
 
-
 class_name Elective
 var question: String
 var options: Array
@@ -11,7 +10,7 @@ var correct_option_index: int
 	#options = o
 	#correct_option_index = coi
 
-
+const File = preload("res://Scripts/file.gd")
 const ELECTIVE_NAMES = {
 	"MATHEMATICS": "Matemática",
 	"PORTUGUESE": "Português"
@@ -19,8 +18,13 @@ const ELECTIVE_NAMES = {
 
 
 static func get_elective_questions(elective: String, parent_elective) -> Array[Elective]:
-	var json_string = FileAccess.get_file_as_string("res://Database/Questions.json")
-	var questions = JSON.parse_string(json_string)
+	#var json = JSON.new()
+	#var file = FileAccess.open("res://Database/Questions.json", FileAccess.READ)
+	#print(file)
+	#print(file.get_as_text())
+	#var questions = json.parse_string(file.get_as_text())
+	var file_manager = File.new()
+	var questions = file_manager.read_file("res://Database/Questions.json")
 	var elective_questions: Array[Elective]
 	for i in questions[parent_elective][elective]:
 		var e = Elective.new()

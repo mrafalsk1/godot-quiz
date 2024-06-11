@@ -15,6 +15,7 @@ var questions: Array[Elective] = []
 
 
 func _ready():
+	print("loading questions ")
 	var selected_elective: String = Dialogic.VAR.elective
 	var selected_parent_elective: String = Dialogic.VAR.parent_elective
 	if not selected_elective or not selected_parent_elective:
