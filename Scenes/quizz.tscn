@@ -1,24 +1,32 @@
-[gd_scene load_steps=15 format=3 uid="uid://dmabr1ke7dvhr"]
+[gd_scene load_steps=13 format=3 uid="uid://dmabr1ke7dvhr"]
 
 [ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_ee8pf"]
 [ext_resource type="Texture2D" uid="uid://b78a58ro2rreq" path="res://Backgrounds/class-quizz.jpg" id="2_lqrs4"]
 [ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="3_dbgbg"]
 [ext_resource type="Theme" uid="uid://dk2i3jjhjxx6t" path="res://assets/tema-opcao-questao/opcao.tres" id="3_le6gn"]
 [ext_resource type="Texture2D" uid="uid://3m7r5obal4hx" path="res://Characters/teste-removebg-preview.png" id="3_srijw"]
-[ext_resource type="Texture2D" uid="uid://cbf0y8xt7c516" path="res://Characters/normal.png" id="4_ncqo6"]
-[ext_resource type="Texture2D" uid="uid://cr6fnstdpqf4p" path="res://assets/icones/number-one-13265.png" id="5_83q55"]
-[ext_resource type="Texture2D" uid="uid://c5nf6htdbeh6w" path="res://assets/icones/Number_2_free_icons_designed_by_Hight_Quality_Icons-removebg-preview.png" id="6_g7myu"]
-[ext_resource type="Texture2D" uid="uid://bks0o6315d6u2" path="res://assets/icones/image-removebg-preview.png" id="7_p5qk5"]
 
-[sub_resource type="Theme" id="Theme_yq7eb"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq6th"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="Theme" id="Theme_8a6lq"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_dq6th")
+
+[sub_resource type="Theme" id="Theme_e6xob"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f42d"]
 bg_color = Color(0.956863, 0.980392, 0.996078, 1)
 border_color = Color(0.898039, 0.819608, 0.917647, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
 
 [sub_resource type="Theme" id="Theme_duwun"]
 default_font_size = 20
@@ -26,16 +34,12 @@ Label/colors/font_color = Color(0.0196078, 0.0823529, 0.101961, 1)
 Label/fonts/font = ExtResource("3_dbgbg")
 Label/styles/normal = SubResource("StyleBoxFlat_4f42d")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rm1e"]
-content_margin_left = 15.0
-content_margin_top = 15.0
-content_margin_right = 15.0
-content_margin_bottom = 15.0
-bg_color = Color(0.74902, 0.886275, 0.945098, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmi51"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ojmlb"]
 line_spacing = 2.0
@@ -47,10 +51,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -4.0
-offset_top = -10.0
-offset_right = -4.0
-offset_bottom = -10.0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ee8pf")
@@ -75,21 +79,21 @@ offset_right = 1148.0
 offset_bottom = 41.0
 theme_override_font_sizes/font_size = 29
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 108.0
+offset_right = 993.0
+offset_bottom = 408.0
+theme = SubResource("Theme_8a6lq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 custom_minimum_size = Vector2(500, 2.08165e-12)
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -88.0
-offset_top = 185.0
-offset_right = 459.0
-offset_bottom = 497.0
-grow_horizontal = 2
-theme = SubResource("Theme_yq7eb")
+layout_mode = 2
+theme = SubResource("Theme_e6xob")
 theme_override_constants/separation = 10
 
-[node name="Question" type="Label" parent="VBoxContainer"]
+[node name="Question" type="Label" parent="PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 2
 size_flags_vertical = 6
@@ -97,53 +101,49 @@ size_flags_stretch_ratio = 0.0
 theme = SubResource("Theme_duwun")
 theme_override_colors/font_color = Color(0.0156863, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_2rm1e")
-text = "teste teste teste"
+theme_override_styles/normal = SubResource("StyleBoxFlat_lmi51")
+text = "teste teste testeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
 label_settings = SubResource("LabelSettings_ojmlb")
 autowrap_mode = 1
 
-[node name="Options" type="VBoxContainer" parent="VBoxContainer"]
+[node name="Options" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Option1" type="Button" parent="VBoxContainer/Options"]
+[node name="Option1" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
 theme = ExtResource("3_le6gn")
 text = "dasd"
-icon = ExtResource("5_83q55")
 expand_icon = true
 
-[node name="Option2" type="Button" parent="VBoxContainer/Options"]
+[node name="Option2" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
 theme = ExtResource("3_le6gn")
 text = "fdsfds"
-icon = ExtResource("6_g7myu")
 expand_icon = true
 
-[node name="Option3" type="Button" parent="VBoxContainer/Options"]
+[node name="Option3" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
 theme = ExtResource("3_le6gn")
 text = "sdfsdf"
-icon = ExtResource("7_p5qk5")
 expand_icon = true
 
-[node name="Option4" type="Button" parent="VBoxContainer/Options"]
+[node name="Option4" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
 theme = ExtResource("3_le6gn")
 text = "fdsfdsfds"
-icon = ExtResource("4_ncqo6")
 expand_icon = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 360.107
 
 [node name="moca" type="Sprite2D" parent="."]
-position = Vector2(179, 425)
-scale = Vector2(0.826241, 0.764407)
+position = Vector2(1712, 716)
+scale = Vector2(1.01389, 0.969066)
 texture = ExtResource("3_srijw")
 
-[connection signal="pressed" from="VBoxContainer/Options/Option1" to="." method="_on_option_1_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options/Option2" to="." method="_on_option_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options/Option3" to="." method="_on_option_3_pressed"]
-[connection signal="pressed" from="VBoxContainer/Options/Option4" to="." method="_on_option_4_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option4" to="." method="_on_option_4_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,9 +1,9 @@
 [gd_scene load_steps=11 format=3 uid="uid://buu8y0j8kvbh2"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_44ap7"]
-[ext_resource type="Texture2D" uid="uid://c30tnd173twc0" path="res://Backgrounds/escola-front.jpg" id="2_rhhqh"]
-[ext_resource type="Texture2D" uid="uid://clyu0pxb7cdkk" path="res://Backgrounds/ensinomedio.png" id="4_7fmq3"]
+[ext_resource type="Texture2D" uid="uid://calch3fdcrwct" path="res://Backgrounds/novo-cenário.jpg" id="2_jkviv"]
 [ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="4_ohfky"]
+[ext_resource type="Texture2D" uid="uid://o2dc0v4v6obk" path="res://assets/titulo/titulo.png" id="4_pp1yd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xmbu"]
 content_margin_left = 4.0
@@ -98,25 +98,25 @@ script = ExtResource("1_44ap7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -47.0
-offset_top = 5.0
-offset_right = 1284.0
-offset_bottom = 726.0
-texture = ExtResource("2_rhhqh")
+offset_left = -19.0
+offset_top = -8.0
+offset_right = 1310.0
+offset_bottom = 735.0
+texture = ExtResource("2_jkviv")
 expand_mode = 3
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 451.0
-offset_top = 423.0
-offset_right = 726.0
-offset_bottom = 496.0
+offset_left = 418.0
+offset_top = 468.0
+offset_right = 693.0
+offset_bottom = 541.0
 theme = SubResource("Theme_4s5b4")
 text = "JOGAR"
 
-[node name="Ensinomedio" type="Sprite2D" parent="."]
-position = Vector2(599, 310)
-scale = Vector2(0.377331, 0.377291)
-texture = ExtResource("4_7fmq3")
+[node name="Titulo" type="Sprite2D" parent="."]
+position = Vector2(554, 273)
+scale = Vector2(0.822049, 0.614183)
+texture = ExtResource("4_pp1yd")
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_button_pressed"]

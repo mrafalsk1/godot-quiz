@@ -7,9 +7,10 @@ var current_question = {
 	"index": -1,
 	"correct_option_index": -1
 }
+
 var questions: Array[Elective] = []
-@onready var options = $VBoxContainer/Options
-@onready var question = $VBoxContainer/Question
+@onready var question = $PanelContainer/VBoxContainer/Question
+@onready var options = $PanelContainer/VBoxContainer/Options
 @onready var timer = $Timer
 @onready var timer_label = $TimerLabel
 
