@@ -1,10 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmabr1ke7dvhr"]
+[gd_scene load_steps=13 format=3 uid="uid://0bia6qs0h472"]
 
-[ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_ee8pf"]
-[ext_resource type="Texture2D" uid="uid://b78a58ro2rreq" path="res://Backgrounds/class-quizz.jpg" id="2_lqrs4"]
+[ext_resource type="Texture2D" uid="uid://b78a58ro2rreq" path="res://Backgrounds/class-quizz.jpg" id="1_8fg1g"]
+[ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_86cxa"]
 [ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="3_dbgbg"]
-[ext_resource type="Theme" uid="uid://dk2i3jjhjxx6t" path="res://assets/tema-opcao-questao/opcao.tres" id="3_le6gn"]
-[ext_resource type="Texture2D" uid="uid://3m7r5obal4hx" path="res://Characters/teste-removebg-preview.png" id="3_srijw"]
+[ext_resource type="Theme" uid="uid://dk2i3jjhjxx6t" path="res://assets/tema-opcao-questao/opcao.tres" id="3_gpxsc"]
+[ext_resource type="Texture2D" uid="uid://3m7r5obal4hx" path="res://Characters/teste-removebg-preview.png" id="4_hln4j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq6th"]
 content_margin_left = 15.0
@@ -46,7 +46,7 @@ line_spacing = 2.0
 font_size = 20
 font_color = Color(0, 0, 0, 1)
 
-[node name="Quizz" type="Control"]
+[node name="Quiz" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,7 +57,7 @@ offset_right = 43.0
 offset_bottom = 38.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ec6yb")
+script = ExtResource("1_86cxa")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -66,7 +66,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_lqrs4")
+texture = ExtResource("1_8fg1g")
 expand_mode = 2
 metadata/_edit_lock_ = true
 
@@ -112,25 +112,25 @@ theme_override_constants/separation = 10
 
 [node name="Option1" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
-theme = ExtResource("3_le6gn")
+theme = ExtResource("3_gpxsc")
 text = "dasd"
 expand_icon = true
 
 [node name="Option2" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
-theme = ExtResource("3_le6gn")
+theme = ExtResource("3_gpxsc")
 text = "fdsfds"
 expand_icon = true
 
 [node name="Option3" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
-theme = ExtResource("3_le6gn")
+theme = ExtResource("3_gpxsc")
 text = "sdfsdf"
 expand_icon = true
 
 [node name="Option4" type="Button" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
-theme = ExtResource("3_le6gn")
+theme = ExtResource("3_gpxsc")
 text = "fdsfdsfds"
 expand_icon = true
 
@@ -140,7 +140,7 @@ wait_time = 360.107
 [node name="moca" type="Sprite2D" parent="."]
 position = Vector2(1712, 716)
 scale = Vector2(1.01389, 0.969066)
-texture = ExtResource("3_srijw")
+texture = ExtResource("4_hln4j")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option1" to="." method="_on_option_1_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option2" to="." method="_on_option_2_pressed"]
