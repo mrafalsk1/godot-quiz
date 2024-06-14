@@ -9,8 +9,7 @@ character (talking): As eletivas, no primeiro ano, dividem-se em\: Eletivas Obri
 	character (talking): top de linha
 	- algebra
 		set {elective} = "ALGEBRA"
-		leave character
-		jump classroom/
 - Português
 	- Teste
+leave character
 [end_timeline]

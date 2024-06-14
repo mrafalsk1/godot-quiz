@@ -87,6 +87,9 @@ Button/styles/hover = SubResource("StyleBoxFlat_jg0t3")
 Button/styles/normal = SubResource("StyleBoxFlat_xmjvr")
 Button/styles/pressed = SubResource("StyleBoxFlat_421b5")
 
+[sub_resource type="Theme" id="Theme_1vbhj"]
+Button/colors/font_color = Color(0.635294, 0.929412, 1, 1)
+
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -119,4 +122,15 @@ position = Vector2(554, 273)
 scale = Vector2(0.822049, 0.614183)
 texture = ExtResource("4_pp1yd")
 
+[node name="RankButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 366.0
+offset_right = 388.0
+offset_bottom = 445.0
+theme = SubResource("Theme_1vbhj")
+text = "Rank
+"
+
 [connection signal="pressed" from="PlayButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="RankButton" to="." method="_on_rank_button_pressed"]

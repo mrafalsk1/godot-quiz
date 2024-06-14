@@ -1,0 +1,13 @@
+[background arg="res://Backgrounds/Classroom 2.png" fade="0.0"]
+join character 1
+character (talking): dsadsa
+- Matemática
+	set {parent_elective} = "MATHEMATICS"
+	character (talking): top de linha
+	- algebra
+		set {elective} = "ALGEBRA"
+- Português
+	- Teste
+	leave character
+leave character
+[signal arg="start_quiz"]

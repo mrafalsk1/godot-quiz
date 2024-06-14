@@ -27,6 +27,7 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "classroom": "res://Timelines/classroom.dtl",
+"quiz": "res://Timelines/quiz.dtl",
 "timeline": "res://Timelines/timeline.dtl"
 }
 glossary/default_case_sensitive=true
