@@ -1,9 +1,8 @@
 [background arg="res://Backgrounds/Classroom 2.png" fade="0.0"]
 join character 1
-character (talking): Olá, eu sou a professora Bia e irei guiá-lo durante sua jornada!
-character (talking): Você está ingressando no novo ensino médio e com isso virão as escolhas de componentes curriculares conhecidos como Eletivas.
-character (talking): Elas são uma preparação para o uso adequado de ferramentas e metodologias de pesquisa que desenvolvem o pensamento crítico e investigativo e auxiliam a inserção do jovem no mercado de trabalho.
-character (talking): As eletivas, no primeiro ano, dividem-se em\: Eletivas Obrigatórias, Eletivas Pré-itinerário e Eletivas de Base.
+character (talking): teste
+character (talking): <Empty Text Event>
+character (talking): <Empty Text Event>
 - Matemática
 	set {parent_elective} = "MATHEMATICS"
 	character (talking): top de linha

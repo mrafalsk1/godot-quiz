@@ -13,7 +13,10 @@ var correct_option_index: int
 const File = preload("res://Scripts/file.gd")
 const ELECTIVE_NAMES = {
 	"MATHEMATICS": "Matemática",
-	"PORTUGUESE": "Português"
+	"PORTUGUESE": "Português",
+	"PHISICS": "Física",
+	"TESTE": "Teste",
+	"PROVA": "Prova"
 }
 
 

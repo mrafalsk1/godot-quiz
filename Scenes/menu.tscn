@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://buu8y0j8kvbh2"]
+[gd_scene load_steps=15 format=3 uid="uid://buu8y0j8kvbh2"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_44ap7"]
 [ext_resource type="Texture2D" uid="uid://calch3fdcrwct" path="res://Backgrounds/novo-cenário.jpg" id="2_jkviv"]
-[ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="4_ohfky"]
+[ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="3_5viq1"]
 [ext_resource type="Texture2D" uid="uid://o2dc0v4v6obk" path="res://assets/titulo/titulo.png" id="4_pp1yd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xmbu"]
@@ -39,27 +39,43 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jg0t3"]
+bg_color = Color(0.34902, 0.545098, 0.666667, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.184314, 0.403922, 0.552941, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmjvr"]
-bg_color = Color(0.239216, 0.482353, 0.592157, 1)
-border_color = Color(0.752941, 0.843137, 1, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-corner_radius_bottom_right = 15
-corner_radius_bottom_left = 15
-shadow_color = Color(0, 0.0117647, 0.0196078, 0.6)
-shadow_size = 10
+bg_color = Color(0.309804, 0.584314, 0.713726, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.0117647, 0.4, 0.564706, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
+shadow_color = Color(0, 0.0666667, 0.0941176, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_421b5"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0, 0, 0, 0.6)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+bg_color = Color(0.34902, 0.545098, 0.666667, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.184314, 0.403922, 0.552941, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 corner_detail = 5
 
 [sub_resource type="Theme" id="Theme_4s5b4"]
@@ -78,17 +94,57 @@ Button/colors/icon_normal_color = Color(1, 1, 1, 1)
 Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
 Button/constants/h_separation = 4
 Button/constants/icon_max_width = 0
-Button/constants/outline_size = 0
-Button/font_sizes/font_size = 24
-Button/fonts/font = ExtResource("4_ohfky")
+Button/constants/outline_size = 4
+Button/font_sizes/font_size = 20
+Button/fonts/font = ExtResource("3_5viq1")
 Button/styles/disabled = SubResource("StyleBoxFlat_2xmbu")
 Button/styles/focus = SubResource("StyleBoxFlat_mbn2u")
 Button/styles/hover = SubResource("StyleBoxFlat_jg0t3")
 Button/styles/normal = SubResource("StyleBoxFlat_xmjvr")
 Button/styles/pressed = SubResource("StyleBoxFlat_421b5")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jse8"]
+bg_color = Color(0.670588, 0.454902, 0.278431, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.560784, 0.309804, 0.219608, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edvu3"]
+bg_color = Color(0.811765, 0.521569, 0.313726, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.717647, 0.364706, 0.254902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
+shadow_color = Color(0.0901961, 0.196078, 0.196078, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppbhe"]
+bg_color = Color(0.811765, 0.521569, 0.313726, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.560784, 0.309804, 0.219608, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
+
 [sub_resource type="Theme" id="Theme_1vbhj"]
-Button/colors/font_color = Color(0.635294, 0.929412, 1, 1)
+default_font_size = 20
+Button/colors/font_color = Color(0.929412, 0.92549, 0.862745, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_3jse8")
+Button/styles/normal = SubResource("StyleBoxFlat_edvu3")
+Button/styles/pressed = SubResource("StyleBoxFlat_ppbhe")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -101,35 +157,37 @@ script = ExtResource("1_44ap7")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -19.0
-offset_top = -8.0
-offset_right = 1310.0
-offset_bottom = 735.0
+offset_left = -51.0
+offset_top = -3.0
+offset_right = 1278.0
+offset_bottom = 740.0
 texture = ExtResource("2_jkviv")
 expand_mode = 3
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 418.0
-offset_top = 468.0
-offset_right = 693.0
-offset_bottom = 541.0
+offset_left = 439.0
+offset_top = 408.0
+offset_right = 672.0
+offset_bottom = 481.0
 theme = SubResource("Theme_4s5b4")
+theme_override_font_sizes/font_size = 18
 text = "JOGAR"
 
 [node name="Titulo" type="Sprite2D" parent="."]
-position = Vector2(554, 273)
+position = Vector2(556, 246)
 scale = Vector2(0.822049, 0.614183)
 texture = ExtResource("4_pp1yd")
 
 [node name="RankButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 195.0
-offset_top = 366.0
-offset_right = 388.0
-offset_bottom = 445.0
+offset_left = 439.0
+offset_top = 505.0
+offset_right = 673.0
+offset_bottom = 575.0
 theme = SubResource("Theme_1vbhj")
-text = "Rank
+theme_override_constants/outline_size = 1
+text = "RANK
 "
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_button_pressed"]

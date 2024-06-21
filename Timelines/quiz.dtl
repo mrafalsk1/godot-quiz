@@ -1,13 +1,21 @@
 [background arg="res://Backgrounds/Classroom 2.png" fade="0.0"]
 join character 1
-character (talking): dsadsa
+character (talking): Olá, eu sou a professora Bia e irei guiá-lo durante sua jornada!
+character (talking): Você está ingressando no novo ensino médio e com isso virão as escolhas de componentes curriculares conhecidos como Eletivas.
+character (talking): Elas são uma preparação para o uso adequado de ferramentas e metodologias de pesquisa que desenvolvem o pensamento crítico e investigativo e auxiliam a inserção do jovem no mercado de trabalho.
+character (talking): As eletivas, no primeiro ano, dividem-se em\: Eletivas Obrigatórias, Eletivas Pré-itinerário e Eletivas de Base.
+character (talking): Dentre as eletivas obrigatórias encontram-se três eixos\: Cultura e Tecnologias Digitais; Iniciação Científica; e Mundo do Trabalho;
+character (talking): O eixo Iniciação Científica estará presente em todos os componentes curriculares, focando Processos Científicos, Investigação Científica e Mediação e Intervenção Sociocultural
+character (talking): Aqui, o objetivo é desenvolver a prática da investigação científica, dentro das escolas, ampliando as possibilidades de participação dos estudantes em eventos científicos regionais, estaduais e/ou nacionais. Desenvolver o aprendizado a respeito da importância da produção de conhecimento científico no contexto da sociedade moderna.
+character (talking): Agora você deverá escolher uma eletiva para obter uma breve apresentação do seu conteúdo. Ao escolher uma delas, será direcionado para um quizz.
 - Matemática
 	set {parent_elective} = "MATHEMATICS"
-	character (talking): top de linha
+	character (talking): Você escolheu Algebra
 	- algebra
 		set {elective} = "ALGEBRA"
 - Português
-	- Teste
+	- Você escolheu português
 	leave character
+- Física
 leave character
 [signal arg="start_quiz"]
