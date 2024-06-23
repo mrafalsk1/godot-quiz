@@ -12,6 +12,7 @@ func _ready():
 func start_minigame() -> void:
 	var minigame = MINIGAME_SCENE.instantiate()
 	add_child(minigame)
+	
 	minigame_scene = minigame
 
 

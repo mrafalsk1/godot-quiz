@@ -61,15 +61,28 @@ func change_question(elective: Elective):
 	reset_timer()
 
 func handle_answer_question(selected_answer_index: int):
+	var answered_correctly;
 	if selected_answer_index == current_question["correct_option_index"]:
-		## TODO feedbacks 	
+		## TODO feedbacks 
+			
 		const CORRECT_ANSWER_SCORE = 100
 		Game.add_score(CORRECT_ANSWER_SCORE * (timer.time_left / 10))
-		print("acerto mizerávi")
+		answered_correctly = true
 	else:
-		print("erro")
-	next_question()
+		answered_correctly = false
+	#next_question()
+	handle_feedback(answered_correctly,selected_answer_index, current_question["correct_option_index"])
 	
+
+func handle_feedback(answered_correctly: bool, button_index_pressed: int, button_correct_answer_index):
+	var buttons = options.get_children()
+	var pressed_button: Button = buttons[button_index_pressed]
+	var correct_answer_button: Button = buttons[button_correct_answer_index]
+	if answered_correctly:
+		pressed_button.modulate = Color(0, 1, 0, 1)
+		#buttons[button_index_pressed].Color = 
+	else:
+		buttons[0].modulate = Color(255,0,255)
 
 func _on_option_1_pressed():
 	handle_answer_question(0)
