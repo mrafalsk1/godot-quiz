@@ -7,8 +7,6 @@ var elective := ''
 const File = preload("res://Scripts/file.gd")
 const RANKS_FILE_PATH = "res://Database/Ranks.json"
 @export var score = 0
-@onready var menu = $"../Menu"
-@onready var timeline_manager = $"../TimelineManager"
 
 func _ready():
 	print("ready")
