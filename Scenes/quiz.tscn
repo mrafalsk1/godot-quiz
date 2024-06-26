@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b78a58ro2rreq" path="res://Backgrounds/class-quizz.jpg" id="1_8fg1g"]
 [ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_86cxa"]
 [ext_resource type="Texture2D" uid="uid://dcki37lp6uvlc" path="res://assets/icones/clock.png" id="2_63xfg"]
-[ext_resource type="Theme" uid="uid://ce5eht0u23eis" path="res://assets/tema-opcao-questao/menu.tres" id="4_2terq"]
+[ext_resource type="Theme" uid="uid://dgo603cjpcbc2" path="res://assets/tema-opcao-questao/menu.tres" id="4_2terq"]
 [ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="4_smylc"]
 [ext_resource type="AudioStream" uid="uid://exqlrwo02wqa" path="res://assets/sounds/quiz-music.mp3" id="6_i4wsj"]
 
