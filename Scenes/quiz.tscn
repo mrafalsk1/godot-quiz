@@ -1,20 +1,44 @@
-[gd_scene load_steps=13 format=3 uid="uid://0bia6qs0h472"]
+[gd_scene load_steps=15 format=3 uid="uid://0bia6qs0h472"]
 
 [ext_resource type="Texture2D" uid="uid://b78a58ro2rreq" path="res://Backgrounds/class-quizz.jpg" id="1_8fg1g"]
 [ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_86cxa"]
-[ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="3_dbgbg"]
-[ext_resource type="Theme" uid="uid://dk2i3jjhjxx6t" path="res://assets/tema-opcao-questao/opcao.tres" id="3_gpxsc"]
+[ext_resource type="Texture2D" uid="uid://dcki37lp6uvlc" path="res://assets/icones/clock.png" id="2_63xfg"]
+[ext_resource type="Theme" uid="uid://ce5eht0u23eis" path="res://assets/tema-opcao-questao/menu.tres" id="4_2terq"]
+[ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="4_smylc"]
+[ext_resource type="AudioStream" uid="uid://exqlrwo02wqa" path="res://assets/sounds/quiz-music.mp3" id="6_i4wsj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_exmfl"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 10.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw0m2"]
 content_margin_bottom = 10.0
-bg_color = Color(0.952941, 0.952941, 0.952941, 1)
-corner_radius_top_left = 100
-corner_radius_top_right = 100
-corner_radius_bottom_right = 100
-corner_radius_bottom_left = 100
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ryle"]
+bg_color = Color(0.962712, 0.8031, 0.753467, 1)
+border_color = Color(0.962712, 0.8031, 0.753467, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5w3gq"]
+bg_color = Color(0.717647, 0.364706, 0.254902, 1)
+border_color = Color(0.717647, 0.364706, 0.254902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq6th"]
 content_margin_left = 15.0
@@ -30,44 +54,79 @@ corner_radius_bottom_left = 15
 [sub_resource type="Theme" id="Theme_8a6lq"]
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_dq6th")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqn42"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 15.0
+expand_margin_top = 20.0
+expand_margin_right = 15.0
+expand_margin_bottom = 20.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
 [sub_resource type="Theme" id="Theme_e6xob"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4f42d"]
-bg_color = Color(0.956863, 0.980392, 0.996078, 1)
-border_color = Color(0.898039, 0.819608, 0.917647, 1)
-corner_radius_top_left = 15
-corner_radius_top_right = 15
-
-[sub_resource type="Theme" id="Theme_duwun"]
-default_font_size = 20
-Label/colors/font_color = Color(0.0196078, 0.0823529, 0.101961, 1)
-Label/fonts/font = ExtResource("3_dbgbg")
-Label/styles/normal = SubResource("StyleBoxFlat_4f42d")
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmi51"]
-content_margin_left = 20.0
-content_margin_top = 20.0
-content_margin_right = 20.0
-content_margin_bottom = 20.0
-bg_color = Color(1, 1, 1, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_ojmlb"]
-line_spacing = 2.0
-font_size = 20
-font_color = Color(0, 0, 0, 1)
+font = ExtResource("4_smylc")
+font_size = 24
+outline_size = 2
 
 [node name="Quiz" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 3.0
-offset_right = 43.0
-offset_bottom = 38.0
+offset_left = -43.0
+offset_top = -1.0
+offset_right = -2.0
+offset_bottom = 34.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_86cxa")
+
+[node name="Panel" type="Panel" parent="."]
+z_index = 2
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -428.0
+offset_top = 21.0
+offset_right = -28.0
+offset_bottom = 84.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mw0m2")
+
+[node name="pb" type="ProgressBar" parent="Panel"]
+z_index = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.425
+anchor_top = 0.056
+anchor_right = 0.425
+anchor_bottom = 0.056
+offset_left = -80.0
+offset_top = 12.472
+offset_right = 221.0
+offset_bottom = 42.472
+theme_override_styles/background = SubResource("StyleBoxFlat_3ryle")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5w3gq")
+max_value = 15.0
+value = 15.0
+show_percentage = false
+
+[node name="Clock" type="Sprite2D" parent="Panel"]
+position = Vector2(46, 30)
+scale = Vector2(0.129517, 0.0957642)
+texture = ExtResource("2_63xfg")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -80,25 +139,21 @@ texture = ExtResource("1_8fg1g")
 expand_mode = 2
 metadata/_edit_lock_ = true
 
-[node name="TimerLabel" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 1011.0
-offset_top = 48.0
-offset_right = 1071.0
-offset_bottom = 107.0
-theme_override_colors/font_color = Color(0.141176, 0.141176, 0.141176, 1)
-theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_exmfl")
-horizontal_alignment = 1
-
 [node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 108.0
-offset_right = 976.0
-offset_bottom = 378.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -203.0
+offset_right = 417.0
+offset_bottom = 203.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_8a6lq")
+theme_override_styles/panel = SubResource("StyleBoxFlat_iqn42")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
 custom_minimum_size = Vector2(500, 2.08165e-12)
@@ -109,68 +164,78 @@ theme_override_constants/separation = 10
 [node name="Question" type="Label" parent="PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
 layout_mode = 2
-size_flags_vertical = 6
 size_flags_stretch_ratio = 0.0
-theme = SubResource("Theme_duwun")
-theme_override_colors/font_color = Color(0.0156863, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_lmi51")
+theme = ExtResource("4_2terq")
+text = "teste teste testeiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
 label_settings = SubResource("LabelSettings_ojmlb")
 autowrap_mode = 1
 
 [node name="Options" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 10
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
 
-[node name="Option1" type="Button" parent="PanelContainer/VBoxContainer/Options"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
-theme = ExtResource("3_gpxsc")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+size_flags_horizontal = 4
+theme_override_constants/separation = 95
+
+[node name="Option1" type="Button" parent="PanelContainer/VBoxContainer/Options/HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("4_2terq")
+theme_override_colors/font_color = Color(0.317647, 0.47451, 1, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 text = "dasd"
 expand_icon = true
 
-[node name="Option2" type="Button" parent="PanelContainer/VBoxContainer/Options"]
+[node name="Option2" type="Button" parent="PanelContainer/VBoxContainer/Options/HBoxContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_direction = 2
 layout_mode = 2
-theme = ExtResource("3_gpxsc")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("4_2terq")
+toggle_mode = true
 text = "fdsfds"
+icon_alignment = 2
 expand_icon = true
 
-[node name="Option3" type="Button" parent="PanelContainer/VBoxContainer/Options"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Options"]
 layout_mode = 2
-theme = ExtResource("3_gpxsc")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+size_flags_horizontal = 4
+theme_override_constants/separation = 95
+
+[node name="Option3" type="Button" parent="PanelContainer/VBoxContainer/Options/HBoxContainer2"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("4_2terq")
+theme_override_colors/font_color = Color(0.317647, 0.47451, 1, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-text = "sdfsdf"
+text = "dasd"
 expand_icon = true
 
-[node name="Option4" type="Button" parent="PanelContainer/VBoxContainer/Options"]
+[node name="Option4" type="Button" parent="PanelContainer/VBoxContainer/Options/HBoxContainer2"]
+custom_minimum_size = Vector2(300, 100)
+layout_direction = 2
 layout_mode = 2
-theme = ExtResource("3_gpxsc")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-text = "fdsfdsfds"
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("4_2terq")
+text = "fdsfds"
 expand_icon = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 360.107
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option1" to="." method="_on_option_1_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option2" to="." method="_on_option_2_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option3" to="." method="_on_option_3_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/Option4" to="." method="_on_option_4_pressed"]
+[node name="QuizMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_i4wsj")
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/HBoxContainer/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/HBoxContainer/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/HBoxContainer2/Option3" to="." method="_on_option_3_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Options/HBoxContainer2/Option4" to="." method="_on_option_4_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
