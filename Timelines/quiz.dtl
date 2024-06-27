@@ -1,21 +1,40 @@
-[background arg="res://Backgrounds/Classroom 2.png" fade="0.0"]
-join character 1
-character (talking): Olá, eu sou a professora Bia e irei guiá-lo durante sua jornada!
-character (talking): Você está ingressando no novo ensino médio e com isso virão as escolhas de componentes curriculares conhecidos como Eletivas.
-character (talking): Elas são uma preparação para o uso adequado de ferramentas e metodologias de pesquisa que desenvolvem o pensamento crítico e investigativo e auxiliam a inserção do jovem no mercado de trabalho.
-character (talking): As eletivas, no primeiro ano, dividem-se em\: Eletivas Obrigatórias, Eletivas Pré-itinerário e Eletivas de Base.
-character (talking): Dentre as eletivas obrigatórias encontram-se três eixos\: Cultura e Tecnologias Digitais; Iniciação Científica; e Mundo do Trabalho;
-character (talking): O eixo Iniciação Científica estará presente em todos os componentes curriculares, focando Processos Científicos, Investigação Científica e Mediação e Intervenção Sociocultural
-character (talking): Aqui, o objetivo é desenvolver a prática da investigação científica, dentro das escolas, ampliando as possibilidades de participação dos estudantes em eventos científicos regionais, estaduais e/ou nacionais. Desenvolver o aprendizado a respeito da importância da produção de conhecimento científico no contexto da sociedade moderna.
+[background arg="res://Backgrounds/classroom.jpg" fade="0.0"]
+join character 1 [animation="Fade In Up" wait="true"]
 character (talking): Agora você deverá escolher uma eletiva para obter uma breve apresentação do seu conteúdo. Ao escolher uma delas, será direcionado para um quizz.
-- Matemática
-	set {parent_elective} = "MATHEMATICS"
-	character (talking): Você escolheu Algebra
-	- algebra
-		set {elective} = "ALGEBRA"
-- Português
-	- Você escolheu português
-	leave character
-- Física
+- Iniciação Científica
+	set {elective} = "iniciacao_cientifica"
+	character (talking): Este curso oferece uma introdução abrangente ao mundo da pesquisa científica, capacitando os estudantes a desenvolverem habilidades essenciais para a prática investigativa.
+	character (talking): Ao longo do curso, os alunos aprenderão a formular hipóteses, desenhar e conduzir experimentos, coletar e analisar dados, e comunicar seus resultados de forma eficaz. \
+
+	character (talking): O currículo inclui tópicos como metodologia científica, revisão de literatura, técnicas de coleta de dados, análise estatística e ética na pesquisa.
+- Ciências Humanas e Sociais [if {} == ""]
+	set {elective} = "ciencias_humanas_sociais"
+	character (talking): Este itinerário oferece uma exploração profunda das ciências humanas e sociais, abordando questões socioculturais que moldam nossa sociedade.
+	character (talking): Os estudantes serão incentivados a investigar temas como justiça social, direitos humanos, políticas públicas, economia, história, sociologia e antropologia.
+	character (talking): O curso promove o desenvolvimento do pensamento crítico, a capacidade de argumentação e a compreensão das complexas dinâmicas sociais. 
+	character (talking): Além disso, os alunos participarão de debates, projetos de pesquisa e atividades práticas que os ajudarão a compreender e atuar sobre problemas sociais contemporâneos. 
+	character (talking): Este itinerário é perfeito para futuros líderes, pensadores críticos e cidadãos engajados que desejam causar um impacto positivo no mundo.
+- Ciências da Natureza e Suas Tecnologias
+	set {elective} = "ciencias_natureza"
+	character (talking): Este curso destina-se a estudantes interessados em explorar os fenômenos naturais e as inovações tecnológicas que transformam nossas vidas. 
+	character (talking): O itinerário cobre uma ampla gama de tópicos nas áreas de física, química, biologia e tecnologias emergentes.
+	character (talking): Os estudantes aprenderão sobre as leis fundamentais da natureza, os processos biológicos que sustentam a vida, as reações químicas que ocorrem ao nosso redor e as tecnologias que impulsionam a inovação.
+	character (talking): O curso inclui atividades práticas em laboratórios, projetos de pesquisa e o uso de ferramentas tecnológicas para resolver problemas complexos.
+	character (talking): Esta eletiva é ideal para mentes curiosas e inovadoras que desejam entender e moldar o mundo ao seu redor.
+- Linguagens e Suas Tecnologias
+	set {elective} = "linguagens_tecnologias"
+	character (talking): Este itinerário é voltado para o desenvolvimento de habilidades de comunicação e interpretação em um mundo cada vez mais interconectado.
+	character (talking): O curso abrange a análise crítica de textos literários e não literários, a produção de conteúdos em diferentes mídias, e o estudo das tecnologias de comunicação.
+	character (talking): Os estudantes exploraram temas como a evolução das linguagens, a influência das mídias na sociedade, técnicas de redação e produção audiovisual, e o uso de ferramentas digitais para comunicação eficaz.
+	character (talking): Além disso, o curso promove a criatividade e a expressão pessoal por meio de projetos práticos e colaborativos.
+	character (talking): Ideal para futuros escritores, jornalistas, comunicadores e criativos que desejam dominar as artes da linguagem e da comunicação.
+- Matemática e Suas Tecnologias
+	set {elective} = "matematica_tecnologias"
+	character (talking): Este curso oferece uma abordagem aprofundada e prática da matemática, preparando os estudantes para resolver problemas complexos e desenvolver soluções inovadoras.
+	character (talking): O itinerário cobre uma variedade de tópicos, incluindo álgebra, geometria, cálculo, estatística e suas aplicações em diversas áreas como economia, engenharia e ciências da computação.
+	character (talking): Os alunos aprenderão a utilizar ferramentas tecnológicas para a resolução de problemas matemáticos, realizar análises quantitativas e interpretar dados. 
+	character (talking): Além disso, o curso enfatiza a importância da matemática no desenvolvimento do pensamento lógico e analítico.
+	character (talking): Esta eletiva é essencial para futuros engenheiros, cientistas de dados, economistas e todos aqueles que valorizam a lógica e a precisão.
+character (talking): Dada esta pequena introdução sobre a eletiva, vamos então para o quiz.
 leave character
 [signal arg="start_quiz"]

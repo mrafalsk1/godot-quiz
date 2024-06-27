@@ -1,6 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://bfat7nxjrbs7u"]
+[gd_scene load_steps=10 format=3 uid="uid://bfat7nxjrbs7u"]
 
 [ext_resource type="Script" path="res://Scripts/rank.gd" id="1_1bp2b"]
+[ext_resource type="Texture2D" uid="uid://calch3fdcrwct" path="res://Backgrounds/novo-cenário.jpg" id="2_60jwv"]
+[ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="3_2lsi8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yudwy"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_ir0um"]
+font = ExtResource("3_2lsi8")
+font_size = 28
+font_color = Color(0.717647, 0.364706, 0.254902, 1)
+outline_size = 6
+outline_color = Color(0.717647, 0.364706, 0.254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xukqd"]
+content_margin_top = 0.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 3
+border_color = Color(0.653667, 0.400088, 0.213852, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_saf5l"]
+font = ExtResource("3_2lsi8")
+font_size = 18
+font_color = Color(0.653667, 0.400088, 0.213852, 1)
+outline_size = 2
+outline_color = Color(0.653667, 0.400088, 0.213852, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sw8r3"]
+font = ExtResource("3_2lsi8")
+font_size = 20
+font_color = Color(0.653667, 0.400088, 0.213852, 1)
+outline_size = 2
+outline_color = Color(0.653667, 0.400088, 0.213852, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hn60"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Rank" type="Control"]
 layout_mode = 3
@@ -11,12 +55,310 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1bp2b")
 
-[node name="Label" type="Label" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 95.0
-offset_top = 123.0
-offset_right = 1097.0
-offset_bottom = 387.0
-text = "JADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahdaOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojJADSOIAhiosahd
+offset_left = -26.0
+offset_top = -5.0
+offset_right = 1303.0
+offset_bottom = 738.0
+texture = ExtResource("2_60jwv")
+expand_mode = 3
 
-aOPISOIijdsaipodiojsaijofidojaijofdsoijaijofoijasijodfjoisaijfoaiosjfoijdsaoijfjisajifosdaoijfijsdaiojv"
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -262.0
+offset_right = 351.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yudwy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "RANQUEAMENTO DAS ELETIVAS"
+label_settings = SubResource("LabelSettings_ir0um")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0156695
+anchor_top = 1.0
+anchor_right = 0.981481
+anchor_bottom = 0.977099
+offset_top = -421.0
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="header" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/header"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_xukqd")
+
+[node name="elective" type="Label" parent="Panel/VBoxContainer/header/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -12.0
+offset_right = 166.0
+offset_bottom = 11.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Eletiva"
+label_settings = SubResource("LabelSettings_saf5l")
+
+[node name="score" type="Label" parent="Panel/VBoxContainer/header/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 557.0
+offset_top = -15.0
+offset_right = 657.0
+offset_bottom = 8.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Pontos"
+label_settings = SubResource("LabelSettings_sw8r3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
+
+[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -12.0
+offset_right = 166.0
+offset_bottom = 11.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Iniciação Científica"
+label_settings = SubResource("LabelSettings_saf5l")
+
+[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 557.0
+offset_top = -15.0
+offset_right = 657.0
+offset_bottom = 8.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "200
+"
+label_settings = SubResource("LabelSettings_sw8r3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer3"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
+
+[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -12.0
+offset_right = 166.0
+offset_bottom = 11.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Iniciação Científica"
+label_settings = SubResource("LabelSettings_saf5l")
+
+[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 557.0
+offset_top = -15.0
+offset_right = 657.0
+offset_bottom = 8.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "200
+"
+label_settings = SubResource("LabelSettings_sw8r3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
+
+[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -12.0
+offset_right = 166.0
+offset_bottom = 11.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Iniciação Científica"
+label_settings = SubResource("LabelSettings_saf5l")
+
+[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 557.0
+offset_top = -15.0
+offset_right = 657.0
+offset_bottom = 8.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "200
+"
+label_settings = SubResource("LabelSettings_sw8r3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer5"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
+
+[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer5/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -12.0
+offset_right = 166.0
+offset_bottom = 11.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Iniciação Científica"
+label_settings = SubResource("LabelSettings_saf5l")
+
+[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer5/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 557.0
+offset_top = -15.0
+offset_right = 657.0
+offset_bottom = 8.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "200
+"
+label_settings = SubResource("LabelSettings_sw8r3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer6"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
+
+[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer6/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -12.0
+offset_right = 166.0
+offset_bottom = 11.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "Iniciação Científica"
+label_settings = SubResource("LabelSettings_saf5l")
+
+[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer6/Panel"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 557.0
+offset_top = -15.0
+offset_right = 657.0
+offset_bottom = 8.0
+grow_vertical = 2
+size_flags_horizontal = 0
+text = "200
+"
+label_settings = SubResource("LabelSettings_sw8r3")
+horizontal_alignment = 2
+vertical_alignment = 2

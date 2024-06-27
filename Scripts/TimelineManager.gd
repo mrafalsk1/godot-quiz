@@ -20,7 +20,7 @@ func _on_game_manager_game_started():
 	print("game started")
 	if Dialogic.current_timeline != null:
 		return
-	Dialogic.start('quiz')
+	Dialogic.start('intro')
 	get_viewport().set_input_as_handled()
 	Dialogic.signal_event.connect(_on_dialogic_signal_event)
 	#Dialogic.timeline_ended.connect(_on_time_line_ended)

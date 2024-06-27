@@ -19,9 +19,7 @@ func add_score(elective_score: int):
 func save_score(elective: String):
 	var file_manager = File.new()
 	var ranks = file_manager.read_file(RANKS_FILE_PATH)
-	print(ranks)
 	ranks[elective] = score
-	print(ranks)
 	file_manager.save_file(RANKS_FILE_PATH, ranks)
 	score = 0
 

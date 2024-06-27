@@ -1,0 +1,5 @@
+[background arg="res://Backgrounds/novo-cenário.jpg" fade="0.0"]
+Este é o começo de sua Jornada no Novo Ensino Médio
+Aqui você vai ter uma breve introdução de como este funciona e iremos trilhar algumas eletivas para voce ter uma pequena noção sobre oque elas tratam.
+Então vamos lá?
+jump npc_intro/

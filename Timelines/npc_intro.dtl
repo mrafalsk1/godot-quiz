@@ -1,0 +1,10 @@
+[background arg="res://Backgrounds/hall_entrada.jpg" fade="0.0"]
+join character 1 [animation="Fade In Up" wait="true"]
+character (talking): Olá, eu sou a professora Bia e irei guiá-lo durante sua jornada!
+character (talking): O Ensino Médio Gaúcho é caracterizado pela ampliação da carga horária e pela flexibilização curricular, trazendo mais autonomia de escolha aos estudantes.
+character (talking): Você está ingressando no novo Ensino Médio e nesse momento escolherá os componentes curriculares conhecidos como Eletivas.
+character (talking): Eletivas correspondem à uma preparação para o uso adequado de ferramentas e metodologias de pesquisa que desenvolvem o pensamento crítico e investigativo e auxiliam a inserção do jovem no mercado de trabalho.
+character (talking): A partir deste momento vamos apresentar para você um pouco sobre algumas eletivas
+Então vamos para a sala de aula.
+leave character
+jump quiz/

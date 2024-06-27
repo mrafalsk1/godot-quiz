@@ -9,17 +9,18 @@ var current_question = {
 }
 
 var questions: Array[Elective] = []
-@onready var question = $PanelContainer/VBoxContainer/Question
-@onready var options = $PanelContainer/VBoxContainer/Options
+@onready var question = $panel/quiz_container/Question
+@onready var options = $panel/quiz_container/Options
 @onready var timer = $Timer
-@onready var timer_label = $TimerLabel
-@onready var option_1 = $PanelContainer/VBoxContainer/Options/HBoxContainer/Option1
-@onready var correct_answer = $CorrectAnswer
+@onready var pb = $timer_panel/pb
+@onready var option_1 = $panel/quiz_container/Options/HBoxContainer/Option1
 @onready var sounds = {
 	&"correct_answer": AudioStreamPlayer.new(),
 	&"wrong_answer": AudioStreamPlayer.new()
 }
-@onready var pb = $Panel/pb
+@onready var quiz_container = $panel/quiz_container
+@onready var timer_panel = $timer_panel
+@onready var start_button = $panel/start_button
 
 var DEFAULT_BUTTON_THEME_NORMAL;
 var DEFAULT_BUTTON_THEME_PRESSED;
@@ -36,31 +37,39 @@ func _ready():
 	var selected_parent_elective: String = Dialogic.VAR.parent_elective
 	if not selected_elective or not selected_parent_elective:
 		return
-	
 	print(pb.value)
-	load_questions(selected_elective,selected_parent_elective)
+	
+
+func start_quiz():
+	var selected_elective: String = Dialogic.VAR.elective
+	var selected_parent_elective: String = Dialogic.VAR.parent_elective
+
+	timer_panel.visible = true
+	quiz_container.visible = true
+	start_button.visible = false
+	load_questions(selected_elective)
+	quiz_music.play()
 	DEFAULT_BUTTON_THEME_NORMAL = option_1.get_theme_stylebox("normal")
 	DEFAULT_BUTTON_THEME_PRESSED = option_1.get_theme_stylebox("pressed")
 	DEFAULT_BUTTON_THEME_HOVER = option_1.get_theme_stylebox("hover")
-	
 	for i in sounds.keys():
 		sounds[i].stream = load("res://assets/sounds/quizz/" + str(i) + ".wav")
 		sounds[i].bus = "master"
 		add_child(sounds[i])
 	
-	quiz_music.play()
-	
-	
+
 func _process(delta):
 	#print(pb.value)
 	#print(timer.time_left)
-	pb.value = timer.time_left
+	if(timer_panel.visible):
+		pb.value = timer.time_left
+	pass
 
 func reset_timer():
 	timer.start(pb.value)
 	
-func load_questions(elective: String, parent_elective: String):
-	questions = Electives.get_elective_questions(elective,parent_elective)
+func load_questions(elective: String):
+	questions = Electives.get_elective_questions(elective)
 	current_question["index"] = 0
 	current_question["correct_option_index"] = questions[0].correct_option_index
 	change_question(questions[0])
@@ -72,7 +81,6 @@ func next_question():
 	if current_question_index >= questions.size() - 1:
 		print("ACABO")
 		Dialogic.signal_event.emit("end_quiz")
-		## TODO change to scenarioa end quizz
 		return
 		
 		
@@ -94,12 +102,14 @@ func change_question(elective: Elective):
 	print(buttons)
 	for idx in range(buttons.size()):
 		var b = buttons[idx]
-		b.text = elective.options[idx]
+		var label = b.get_child(0).get_child(0)
+		label.text = elective.options[idx]
 		reset_button_style(b)
 
 	reset_timer()
 
 func reset_button_style(button: Button):
+	print(button)
 	button.add_theme_stylebox_override("normal",DEFAULT_BUTTON_THEME_NORMAL)
 	button.add_theme_stylebox_override("pressed",DEFAULT_BUTTON_THEME_PRESSED)
 	button.add_theme_stylebox_override("hover",DEFAULT_BUTTON_THEME_HOVER)
@@ -171,3 +181,11 @@ func _on_timer_timeout():
 	handle_answer_question(-1)
 	
 	pass # Replace with function body.
+
+
+func _on_button_pressed():
+	start_quiz()
+	
+	pass # Replace with function body.
+
+
