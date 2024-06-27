@@ -82,7 +82,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 [sub_resource type="LabelSettings" id="LabelSettings_1re2x"]
 font = ExtResource("5_2c7bl")
 font_size = 18
-outline_size = 2
+outline_size = 3
 
 [node name="Quiz" type="Control"]
 layout_mode = 3
