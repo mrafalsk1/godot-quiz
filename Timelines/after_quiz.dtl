@@ -1,0 +1,6 @@
+[background arg="res://Backgrounds/quiz_resultados.jpg" fade="0.0"]
+join character 1 [animation="Fade In Up"]
+character (talking): Parabéns por ter concluído esta eletiva
+character (talking): Então vamos para a próxima
+leave character [animation="Fade Out Down" wait="true"]
+jump quiz/

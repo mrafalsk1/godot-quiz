@@ -26,12 +26,17 @@ directories/dch_directory={
 "character": "res://Characters/character.dch"
 }
 directories/dtl_directory={
+"after_quiz": "res://Timelines/after_quiz.dtl",
 "classroom": "res://Timelines/classroom.dtl",
+"en": "res://en.dtl",
+"intro": "res://Timelines/intro.dtl",
+"npc_intro": "res://Timelines/npc_intro.dtl",
 "quiz": "res://Timelines/quiz.dtl",
 "timeline": "res://Timelines/timeline.dtl"
 }
 glossary/default_case_sensitive=true
 variables={
+"count_elective": "0",
 "elective": "",
 "parent_elective": ""
 }
@@ -51,18 +56,21 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://assets/New_File.tres"]
+layout/default_style="res://assets/New_File.tres"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[gui]
+
+fonts/dynamic_fonts/use_oversampling=false
 
 [input]
 

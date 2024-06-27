@@ -94,7 +94,7 @@ label_settings = SubResource("LabelSettings_ir0um")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="electives" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0156695
@@ -106,17 +106,17 @@ grow_horizontal = 2
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="header" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="header" type="HBoxContainer" parent="Panel/electives"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/header"]
+[node name="Panel" type="Panel" parent="Panel/electives/header"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_xukqd")
 
-[node name="elective" type="Label" parent="Panel/VBoxContainer/header/Panel"]
+[node name="elective" type="Label" parent="Panel/electives/header/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -131,7 +131,7 @@ size_flags_horizontal = 0
 text = "Eletiva"
 label_settings = SubResource("LabelSettings_saf5l")
 
-[node name="score" type="Label" parent="Panel/VBoxContainer/header/Panel"]
+[node name="score" type="Label" parent="Panel/electives/header/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -148,17 +148,17 @@ label_settings = SubResource("LabelSettings_sw8r3")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/electives"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer2"]
+[node name="Panel" type="Panel" parent="Panel/electives/HBoxContainer2"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
 
-[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel"]
+[node name="elective" type="Label" parent="Panel/electives/HBoxContainer2/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -173,7 +173,7 @@ size_flags_horizontal = 0
 text = "Iniciação Científica"
 label_settings = SubResource("LabelSettings_saf5l")
 
-[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer2/Panel"]
+[node name="score" type="Label" parent="Panel/electives/HBoxContainer2/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -191,17 +191,17 @@ label_settings = SubResource("LabelSettings_sw8r3")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/electives"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer3"]
+[node name="Panel" type="Panel" parent="Panel/electives/HBoxContainer3"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
 
-[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel"]
+[node name="elective" type="Label" parent="Panel/electives/HBoxContainer3/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -216,7 +216,7 @@ size_flags_horizontal = 0
 text = "Iniciação Científica"
 label_settings = SubResource("LabelSettings_saf5l")
 
-[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer3/Panel"]
+[node name="score" type="Label" parent="Panel/electives/HBoxContainer3/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -234,17 +234,17 @@ label_settings = SubResource("LabelSettings_sw8r3")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/electives"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer4"]
+[node name="Panel" type="Panel" parent="Panel/electives/HBoxContainer4"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
 
-[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel"]
+[node name="elective" type="Label" parent="Panel/electives/HBoxContainer4/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -259,7 +259,7 @@ size_flags_horizontal = 0
 text = "Iniciação Científica"
 label_settings = SubResource("LabelSettings_saf5l")
 
-[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer4/Panel"]
+[node name="score" type="Label" parent="Panel/electives/HBoxContainer4/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -277,17 +277,17 @@ label_settings = SubResource("LabelSettings_sw8r3")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="Panel/electives"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer5"]
+[node name="Panel" type="Panel" parent="Panel/electives/HBoxContainer5"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
 
-[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer5/Panel"]
+[node name="elective" type="Label" parent="Panel/electives/HBoxContainer5/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -302,7 +302,7 @@ size_flags_horizontal = 0
 text = "Iniciação Científica"
 label_settings = SubResource("LabelSettings_saf5l")
 
-[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer5/Panel"]
+[node name="score" type="Label" parent="Panel/electives/HBoxContainer5/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -320,17 +320,17 @@ label_settings = SubResource("LabelSettings_sw8r3")
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/VBoxContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="Panel/electives"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Panel/VBoxContainer/HBoxContainer6"]
+[node name="Panel" type="Panel" parent="Panel/electives/HBoxContainer6"]
 layout_direction = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_1hn60")
 
-[node name="elective" type="Label" parent="Panel/VBoxContainer/HBoxContainer6/Panel"]
+[node name="elective" type="Label" parent="Panel/electives/HBoxContainer6/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4
@@ -345,7 +345,7 @@ size_flags_horizontal = 0
 text = "Iniciação Científica"
 label_settings = SubResource("LabelSettings_saf5l")
 
-[node name="score" type="Label" parent="Panel/VBoxContainer/HBoxContainer6/Panel"]
+[node name="score" type="Label" parent="Panel/electives/HBoxContainer6/Panel"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 1
 anchors_preset = 4

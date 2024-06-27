@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://0bia6qs0h472"]
+[gd_scene load_steps=16 format=3 uid="uid://0bia6qs0h472"]
 
 [ext_resource type="Texture2D" uid="uid://b78a58ro2rreq" path="res://Backgrounds/class-quizz.jpg" id="1_8fg1g"]
 [ext_resource type="Script" path="res://Scripts/quizz.gd" id="1_86cxa"]
 [ext_resource type="Texture2D" uid="uid://dcki37lp6uvlc" path="res://assets/icones/clock.png" id="2_63xfg"]
 [ext_resource type="Theme" uid="uid://ce5eht0u23eis" path="res://assets/tema-opcao-questao/menu.tres" id="4_2terq"]
+[ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="5_2c7bl"]
 [ext_resource type="AudioStream" uid="uid://exqlrwo02wqa" path="res://assets/sounds/quiz-music.mp3" id="6_i4wsj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mw0m2"]
@@ -79,6 +80,9 @@ content_margin_right = 20.0
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1re2x"]
+font = ExtResource("5_2c7bl")
+font_size = 18
+outline_size = 2
 
 [node name="Quiz" type="Control"]
 layout_mode = 3
@@ -267,12 +271,13 @@ grow_vertical = 2
 [node name="option" type="Label" parent="panel/quiz_container/Options/HBoxContainer2/Option3/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+size_flags_stretch_ratio = 4.66
 theme_override_styles/normal = SubResource("StyleBoxFlat_dhoy7")
-text = "Desenvolver a prática da investigação científica"
+text = "aaaaaaaaaaaaa"
 label_settings = SubResource("LabelSettings_1re2x")
 vertical_alignment = 1
 autowrap_mode = 3
+clip_text = true
 
 [node name="Option4" type="Button" parent="panel/quiz_container/Options/HBoxContainer2"]
 custom_minimum_size = Vector2(300, 100)

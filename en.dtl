@@ -1,0 +1,6 @@
+[background arg="res://Backgrounds/novo-cenário.jpg" fade="0.0"]
+join character 1
+character (talking): Parabéns por ter concluído o Ensino médio
+leave character
+Obrigado por jogar!
+[signal arg="end_game"]

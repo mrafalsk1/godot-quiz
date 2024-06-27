@@ -14,13 +14,16 @@ func _ready():
 
 
 func add_score(elective_score: int):
-	score = elective_score	
+	score += elective_score	
 
 func save_score(elective: String):
+	
 	var file_manager = File.new()
 	var ranks = file_manager.read_file(RANKS_FILE_PATH)
-	ranks[elective] = score
-	file_manager.save_file(RANKS_FILE_PATH, ranks)
+
+	if score > int(ranks[elective]):
+		ranks[elective] = score
+		file_manager.save_file(RANKS_FILE_PATH, ranks)
 	score = 0
 
 func select_elective(selected_elective: String):

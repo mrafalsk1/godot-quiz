@@ -34,8 +34,10 @@ func _on_dialogic_signal_event(argument: String):
 		print("next_quiz")
 		remove_child(show_results_scene)
 		print("next_quiz")
-		
 		_on_next_quiz()
+	if argument == "end_game":
+		get_tree().quit()
+
 
 
 
@@ -50,11 +52,17 @@ func _on_end_quiz():
 
 	
 func _on_next_quiz():
-	if Dialogic.current_timeline != null:
-		return
-	Dialogic.start('quiz')
-	get_viewport().set_input_as_handled()
-	Dialogic.signal_event.connect(_on_dialogic_signal_event)
+	var count_electives = Dialogic.VAR.count_elective
+	print("count")
+	print(count_electives)
+	if int(count_electives) == 3:
+		Dialogic.start("en")
+	else: 
+		if Dialogic.current_timeline != null:
+			return
+		Dialogic.start('after_quiz')
+		get_viewport().set_input_as_handled()
+		Dialogic.signal_event.connect(_on_dialogic_signal_event)
 	
 	
 #

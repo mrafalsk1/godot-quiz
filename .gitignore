@@ -2,3 +2,5 @@
 .godot/
 assets/School
 Ranks.json
+.tmp
+.import

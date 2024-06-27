@@ -1,30 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://bi56savh3royf"]
+[gd_scene load_steps=9 format=3 uid="uid://bi56savh3royf"]
 
 [ext_resource type="Script" path="res://Scripts/show_results.gd" id="1_a0j43"]
 [ext_resource type="Texture2D" uid="uid://b8g8bblfndv3a" path="res://Backgrounds/Classroom 2.png" id="2_bnw57"]
-[ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="3_d8cuf"]
+[ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="3_v0ipa"]
 [ext_resource type="Theme" uid="uid://ce5eht0u23eis" path="res://assets/tema-opcao-questao/menu.tres" id="4_g7ofu"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbh6n"]
-content_margin_left = 10.0
-content_margin_top = 10.0
-content_margin_right = 10.0
-content_margin_bottom = 10.0
-bg_color = Color(0.972549, 0.972549, 0.972549, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cikft"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="Theme" id="Theme_qo7ve"]
-Label/styles/normal = SubResource("StyleBoxFlat_pbh6n")
+[sub_resource type="LabelSettings" id="LabelSettings_kfbuf"]
+font = ExtResource("3_v0ipa")
+font_size = 28
+font_color = Color(0.717647, 0.364706, 0.254902, 1)
+outline_size = 6
+outline_color = Color(0.717647, 0.364706, 0.254902, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqa5x"]
 content_margin_left = 10.0
 content_margin_top = 10.0
 content_margin_right = 10.0
 content_margin_bottom = 10.0
-bg_color = Color(0.678431, 0.819608, 0.941176, 1)
+bg_color = Color(0.717647, 0.364706, 0.254902, 1)
 corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
@@ -33,6 +38,13 @@ expand_margin_left = 5.0
 expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_201gl"]
+font = ExtResource("3_v0ipa")
+font_size = 48
+font_color = Color(0.923956, 0.635434, 0.545852, 1)
+outline_size = 4
+outline_color = Color(0.92549, 0.635294, 0.545098, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -50,41 +62,71 @@ offset_bottom = 685.0
 texture = ExtResource("2_bnw57")
 expand_mode = 2
 
-[node name="descricao" type="Label" parent="."]
-layout_mode = 0
-offset_left = 355.0
-offset_top = 154.0
-offset_right = 739.0
-offset_bottom = 198.0
-theme = SubResource("Theme_qo7ve")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_d8cuf")
-theme_override_font_sizes/font_size = 20
-text = "A sua maior pontuação na eletiva foi:"
-horizontal_alignment = 1
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -286.0
+offset_top = -249.0
+offset_right = 416.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cikft")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 494.0
-offset_top = 260.0
-offset_right = 580.0
-offset_bottom = 342.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[node name="descricao" type="Label" parent="Panel2/HBoxContainer"]
+custom_minimum_size = Vector2(650, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+label_settings = SubResource("LabelSettings_kfbuf")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.496
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.192
+offset_top = -90.0
+offset_right = 60.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_dqa5x")
+text = "200"
+label_settings = SubResource("LabelSettings_201gl")
 horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="ContinueButton" type="Button" parent="."]
+[node name="ContinueButton" type="Button" parent="Panel2"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.24
 anchor_top = 0.33
 anchor_right = 0.365
 anchor_bottom = 0.384
-offset_left = 162.52
-offset_top = 204.16
-offset_right = 270.52
-offset_bottom = 247.168
+offset_left = 41.52
+offset_top = 194.08
+offset_right = 223.77
+offset_bottom = 252.784
 theme = ExtResource("4_g7ofu")
+theme_override_font_sizes/font_size = 36
 text = "Continuar"
 
-[connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="Panel2/ContinueButton" to="." method="_on_continue_button_pressed"]

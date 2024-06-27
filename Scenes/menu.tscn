@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://calch3fdcrwct" path="res://Backgrounds/novo-cenário.jpg" id="2_jkviv"]
 [ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="3_5viq1"]
 [ext_resource type="Texture2D" uid="uid://o2dc0v4v6obk" path="res://assets/titulo/titulo.png" id="4_pp1yd"]
-[ext_resource type="StyleBox" path="res://assets/tema-opcao-questao/botaoazul.tres" id="4_wmdxu"]
+[ext_resource type="StyleBox" uid="uid://b3nskj2lplv8y" path="res://assets/tema-opcao-questao/botaoazul.tres" id="4_wmdxu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xmbu"]
 content_margin_left = 4.0

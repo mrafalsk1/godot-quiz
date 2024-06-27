@@ -29,7 +29,7 @@ var DEFAULT_BUTTON_THEME_HOVER;
 const CORRECT_ANSWER_BUTTON = preload("res://assets/tema-opcao-questao/correct_answer_button.tres")
 const WRONG_ANSWER_BUTTON = preload("res://assets/tema-opcao-questao/wrong_answer_button.tres")
 @onready var quiz_music = $QuizMusic
-
+var question_answered = false
 
 func _ready():
 	print("loading questions ")
@@ -104,27 +104,32 @@ func change_question(elective: Elective):
 		var b = buttons[idx]
 		var label = b.get_child(0).get_child(0)
 		label.text = elective.options[idx]
+		print(label.text)
 		reset_button_style(b)
-
+	question_answered = false
 	reset_timer()
+	
 
 func reset_button_style(button: Button):
 	print(button)
+	button.disabled = false
 	button.add_theme_stylebox_override("normal",DEFAULT_BUTTON_THEME_NORMAL)
 	button.add_theme_stylebox_override("pressed",DEFAULT_BUTTON_THEME_PRESSED)
 	button.add_theme_stylebox_override("hover",DEFAULT_BUTTON_THEME_HOVER)
 
 func handle_answer_question(selected_answer_index: int):
 	var answered_correctly;
-	if selected_answer_index == current_question["correct_option_index"]:
-		const CORRECT_ANSWER_SCORE = 100
-		Game.add_score(CORRECT_ANSWER_SCORE * (timer.time_left / 10))
-		answered_correctly = true
-	else:
-		answered_correctly = false
-	#next_question()
-	handle_feedback(answered_correctly,selected_answer_index,
-	current_question["correct_option_index"])
+	if question_answered == false:
+		question_answered = true
+		if selected_answer_index == current_question["correct_option_index"]:
+			const CORRECT_ANSWER_SCORE = 100
+			Game.add_score(CORRECT_ANSWER_SCORE * (timer.time_left / 10))
+			answered_correctly = true
+		else:
+			answered_correctly = false
+		#next_question()
+		handle_feedback(answered_correctly,selected_answer_index,
+		current_question["correct_option_index"])
 	
 
 func handle_feedback(answered_correctly: bool, button_index_pressed: int, button_correct_answer_index: int):
@@ -138,7 +143,7 @@ func handle_feedback(answered_correctly: bool, button_index_pressed: int, button
 	if answered_correctly:
 		pressed_button.add_theme_stylebox_override("normal",CORRECT_ANSWER_BUTTON)
 		pressed_button.add_theme_stylebox_override("pressed",CORRECT_ANSWER_BUTTON)
-		pressed_button.add_theme_stylebox_override("hover",WRONG_ANSWER_BUTTON)
+		pressed_button.add_theme_stylebox_override("hover",CORRECT_ANSWER_BUTTON)
 		print(sounds)
 		sounds["correct_answer"].play()
 	else:

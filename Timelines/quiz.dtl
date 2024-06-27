@@ -7,7 +7,7 @@ character (talking): Agora você deverá escolher uma eletiva para obter uma bre
 	character (talking): Ao longo do curso, os alunos aprenderão a formular hipóteses, desenhar e conduzir experimentos, coletar e analisar dados, e comunicar seus resultados de forma eficaz. \
 
 	character (talking): O currículo inclui tópicos como metodologia científica, revisão de literatura, técnicas de coleta de dados, análise estatística e ética na pesquisa.
-- Ciências Humanas e Sociais [if {} == ""]
+- Ciências Humanas e Sociais
 	set {elective} = "ciencias_humanas_sociais"
 	character (talking): Este itinerário oferece uma exploração profunda das ciências humanas e sociais, abordando questões socioculturais que moldam nossa sociedade.
 	character (talking): Os estudantes serão incentivados a investigar temas como justiça social, direitos humanos, políticas públicas, economia, história, sociologia e antropologia.
