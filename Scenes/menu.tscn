@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://calch3fdcrwct" path="res://Backgrounds/novo-cenário.jpg" id="2_jkviv"]
 [ext_resource type="FontFile" uid="uid://cjkhw4ipfejgj" path="res://assets/fontes/Josefin_Sans/JosefinSans-VariableFont_wght.ttf" id="3_5viq1"]
 [ext_resource type="Texture2D" uid="uid://o2dc0v4v6obk" path="res://assets/titulo/titulo.png" id="4_pp1yd"]
+[ext_resource type="StyleBox" path="res://assets/tema-opcao-questao/botaoazul.tres" id="4_wmdxu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2xmbu"]
 content_margin_left = 4.0
@@ -49,20 +50,6 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 corner_detail = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmjvr"]
-bg_color = Color(0.309804, 0.584314, 0.713726, 1)
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.0117647, 0.4, 0.564706, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-corner_detail = 1
-shadow_color = Color(0, 0.0666667, 0.0941176, 0.6)
-shadow_size = 4
-shadow_offset = Vector2(2, 2)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_421b5"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -100,7 +87,7 @@ Button/fonts/font = ExtResource("3_5viq1")
 Button/styles/disabled = SubResource("StyleBoxFlat_2xmbu")
 Button/styles/focus = SubResource("StyleBoxFlat_mbn2u")
 Button/styles/hover = SubResource("StyleBoxFlat_jg0t3")
-Button/styles/normal = SubResource("StyleBoxFlat_xmjvr")
+Button/styles/normal = ExtResource("4_wmdxu")
 Button/styles/pressed = SubResource("StyleBoxFlat_421b5")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jse8"]

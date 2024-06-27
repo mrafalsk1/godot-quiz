@@ -1,192 +1,192 @@
 {
   "matematica_tecnologias": [
-    {
-      "question": "Qual é o objetivo principal deste itinerário?",
-      "options": [
-        "Desenvolver habilidades artísticas",
-        "Compreender conceitos matemáticos avançados",
-        "Estudar a evolução das línguas",
-        "Analisar fenômenos socioculturais"
-      ],
-      "correct_option_index": 1
-    },
-    {
-      "question": "Qual competência é desenvolvida neste curso?",
-      "options": [
-        "Criação de projetos de arte",
-        "Resolver problemas matemáticos aplicados ao cotidiano",
-        "Análise de textos literários",
-        "Investigação de fenômenos históricos"
-      ],
-      "correct_option_index": 1
-    },
-    {
-      "question": "Qual das seguintes áreas é explorada neste itinerário?",
-      "options": ["Literatura", "Economia", "Matemática", "Biologia"],
-      "correct_option_index": 2
-    },
-    {
-      "question": "Qual atividade prática é comum neste curso?",
-      "options": [
-        "Análise quantitativa de dados",
-        "Redação de textos jornalísticos",
-        "Criação de projetos de engenharia",
-        "Realização de performances teatrais"
-      ],
-      "correct_option_index": 0
-    }
+	{
+	  "question": "Qual é o objetivo principal deste itinerário?",
+	  "options": [
+		"Desenvolver habilidades artísticas",
+		"Compreender conceitos matemáticos avançados",
+		"Estudar a evolução das línguas",
+		"Analisar fenômenos socioculturais"
+	  ],
+	  "correct_option_index": 1
+	},
+	{
+	  "question": "Qual competência é desenvolvida neste curso?",
+	  "options": [
+		"Criação de projetos de arte",
+		"Resolver problemas matemáticos aplicados ao cotidiano",
+		"Análise de textos literários",
+		"Investigação de fenômenos históricos"
+	  ],
+	  "correct_option_index": 1
+	},
+	{
+	  "question": "Qual das seguintes áreas é explorada neste itinerário?",
+	  "options": ["Literatura", "Economia", "Matemática", "Biologia"],
+	  "correct_option_index": 2
+	},
+	{
+	  "question": "Qual atividade prática é comum neste curso?",
+	  "options": [
+		"Análise quantitativa de dados",
+		"Redação de textos jornalísticos",
+		"Criação de projetos de engenharia",
+		"Realização de performances teatrais"
+	  ],
+	  "correct_option_index": 0
+	}
   ],
   "linguagens_tecnologias": [
-    {
-      "question": "Qual é um dos focos principais deste itinerário?",
-      "options": [
-        "Investigação de fenômenos biológicos",
-        "Análise crítica de textos e mídias",
-        "Desenvolvimento de habilidades matemáticas",
-        "Estudo de técnicas de engenharia"
-      ],
-      "correct_option_index": 1
-    },
-    {
-      "question": "Qual das seguintes competências é desenvolvida neste curso?",
-      "options": [
-        "Resolver problemas matemáticos complexos",
-        "Identificar espécies de plantas",
-        "Compreender e produzir textos em diferentes linguagens",
-        "Realizar experimentos químicos"
-      ],
-      "correct_option_index": 2
-    },
-    {
-      "question": "Qual área é explorada neste itinerário?",
-      "options": ["Física", "Química", "Linguagens e comunicação", "Geometria"],
-      "correct_option_index": 2
-    },
-    {
-      "question": "Qual atividade prática pode ser incluída neste curso?",
-      "options": [
-        "Produção de conteúdos audiovisuais",
-        "Realização de experimentos biológicos",
-        "Análise de dados estatísticos",
-        "Construção de modelos matemáticos"
-      ],
-      "correct_option_index": 0
-    }
+	{
+	  "question": "Qual é um dos focos principais deste itinerário?",
+	  "options": [
+		"Investigação de fenômenos biológicos",
+		"Análise crítica de textos e mídias",
+		"Desenvolvimento de habilidades matemáticas",
+		"Estudo de técnicas de engenharia"
+	  ],
+	  "correct_option_index": 1
+	},
+	{
+	  "question": "Qual das seguintes competências é desenvolvida neste curso?",
+	  "options": [
+		"Resolver problemas matemáticos complexos",
+		"Identificar espécies de plantas",
+		"Compreender e produzir textos em diferentes linguagens",
+		"Realizar experimentos químicos"
+	  ],
+	  "correct_option_index": 2
+	},
+	{
+	  "question": "Qual área é explorada neste itinerário?",
+	  "options": ["Física", "Química", "Linguagens e comunicação", "Geometria"],
+	  "correct_option_index": 2
+	},
+	{
+	  "question": "Qual atividade prática pode ser incluída neste curso?",
+	  "options": [
+		"Produção de conteúdos audiovisuais",
+		"Realização de experimentos biológicos",
+		"Análise de dados estatísticos",
+		"Construção de modelos matemáticos"
+	  ],
+	  "correct_option_index": 0
+	}
   ],
   "ciencias_natureza": [
-    {
-      "question": "Qual é um dos objetivos deste itinerário?",
-      "options": [
-        "Compreender conceitos históricos",
-        "Analisar fenômenos naturais e tecnológicos",
-        "Desenvolver habilidades de redação",
-        "Criar projetos artísticos"
-      ],
-      "correct_option_index": 1
-    },
-    {
-      "question": "Qual das seguintes áreas é estudada neste curso?",
-      "options": ["Geografia", "Matemática", "Biologia", "Língua Portuguesa"],
-      "correct_option_index": 2
-    },
-    {
-      "question": "Qual competência é desenvolvida neste itinerário?",
-      "options": [
-        "Criação de narrativas literárias",
-        "Exploração de fenômenos físicos e químicos",
-        "Análise de obras de arte",
-        "Desenvolvimento de estratégias de marketing"
-      ],
-      "correct_option_index": 1
-    },
-    {
-      "question": "Qual atividade prática é comum neste curso?",
-      "options": [
-        "Análise de dados científicos",
-        "Criação de textos publicitários",
-        "Composição musical",
-        "Desenho artístico"
-      ],
-      "correct_option_index": 0
-    }
+	{
+	  "question": "Qual é um dos objetivos deste itinerário?",
+	  "options": [
+		"Compreender conceitos históricos",
+		"Analisar fenômenos naturais e tecnológicos",
+		"Desenvolver habilidades de redação",
+		"Criar projetos artísticos"
+	  ],
+	  "correct_option_index": 1
+	},
+	{
+	  "question": "Qual das seguintes áreas é estudada neste curso?",
+	  "options": ["Geografia", "Matemática", "Biologia", "Língua Portuguesa"],
+	  "correct_option_index": 2
+	},
+	{
+	  "question": "Qual competência é desenvolvida neste itinerário?",
+	  "options": [
+		"Criação de narrativas literárias",
+		"Exploração de fenômenos físicos e químicos",
+		"Análise de obras de arte",
+		"Desenvolvimento de estratégias de marketing"
+	  ],
+	  "correct_option_index": 1
+	},
+	{
+	  "question": "Qual atividade prática é comum neste curso?",
+	  "options": [
+		"Análise de dados científicos",
+		"Criação de textos publicitários",
+		"Composição musical",
+		"Desenho artístico"
+	  ],
+	  "correct_option_index": 0
+	}
   ],
   "ciencias_humanas_sociais": [
-    {
-      "question": "Qual é o foco principal do Pré-Itinerário de Ciências Humanas e Sociais?",
-      "options": [
-        "Estudo de fenômenos naturais",
-        "Investigação de questões socioculturais",
-        "Desenvolvimento de habilidades matemáticas",
-        "Criação de aplicativos móveis"
-      ],
-      "correct_option_index": 1
-    },
-    {
-      "question": "Qual das seguintes disciplinas faz parte do conteúdo deste itinerário?",
-      "options": ["Sociologia", "Física", "Biologia", "Engenharia"],
-      "correct_option_index": 0
-    },
-    {
-      "question": "Qual competência é incentivada neste curso?",
-      "options": [
-        "Desenvolvimento de aplicativos",
-        "Formulação de hipóteses científicas",
-        "Pensamento crítico e argumentação",
-        "Resolução de problemas de cálculo"
-      ],
-      "correct_option_index": 2
-    },
-    {
-      "question": "Qual atividade prática pode ser incluída neste itinerário?",
-      "options": [
-        "Debates sobre questões sociais",
-        "Experimentos laboratoriais",
-        "Criação de obras de arte",
-        "Programação de software"
-      ],
-      "correct_option_index": 0
-    }
+	{
+	  "question": "Qual é o foco principal do Pré-Itinerário de Ciências Humanas e Sociais?",
+	  "options": [
+		"Estudo de fenômenos naturais",
+		"Investigação de questões socioculturais",
+		"Desenvolvimento de habilidades matemáticas",
+		"Criação de aplicativos móveis"
+	  ],
+	  "correct_option_index": 1
+	},
+	{
+	  "question": "Qual das seguintes disciplinas faz parte do conteúdo deste itinerário?",
+	  "options": ["Sociologia", "Física", "Biologia", "Engenharia"],
+	  "correct_option_index": 0
+	},
+	{
+	  "question": "Qual competência é incentivada neste curso?",
+	  "options": [
+		"Desenvolvimento de aplicativos",
+		"Formulação de hipóteses científicas",
+		"Pensamento crítico e argumentação",
+		"Resolução de problemas de cálculo"
+	  ],
+	  "correct_option_index": 2
+	},
+	{
+	  "question": "Qual atividade prática pode ser incluída neste itinerário?",
+	  "options": [
+		"Debates sobre questões sociais",
+		"Experimentos laboratoriais",
+		"Criação de obras de arte",
+		"Programação de software"
+	  ],
+	  "correct_option_index": 0
+	}
   ],
   "iniciacao_cientifica": [
-    {
-      "question": "Qual é o principal objetivo da Iniciação Científica?",
-      "options": [
-        "Desenvolver habilidades musicais",
-        "Melhorar a comunicação verbal",
-        "Desenvolver a prática da investigação científica",
-        "Aprender técnicas de desenho"
-      ],
-      "correct_option_index": 2
-    },
-    {
-      "question": "Qual é um dos temas abordados na Iniciação Científica?",
-      "options": [
-        "Métodos de coleta de dados",
-        "Teoria da evolução",
-        "História da arte",
-        "Políticas públicas"
-      ],
-      "correct_option_index": 0
-    },
-    {
-      "question": "Qual é uma das competências desenvolvidas no curso de Iniciação Científica?",
-      "options": [
-        "Formulação de hipóteses",
-        "Interpretação de textos literários",
-        "Solução de problemas matemáticos",
-        "Criação de projetos de engenharia"
-      ],
-      "correct_option_index": 0
-    },
-    {
-      "question": "Qual atividade prática é comum na Iniciação Científica?",
-      "options": [
-        "Redação de artigos científicos",
-        "Composição musical",
-        "Desenho técnico",
-        "Dança contemporânea"
-      ],
-      "correct_option_index": 0
-    }
+	{
+	  "question": "Qual é o principal objetivo da Iniciação Científica?",
+	  "options": [
+		"Desenvolver habilidades musicais",
+		"Melhorar a comunicação verbal",
+		"Desenvolver a prática da investigação científica",
+		"Aprender técnicas de desenho"
+	  ],
+	  "correct_option_index": 2
+	},
+	{
+	  "question": "Qual é um dos temas abordados na Iniciação Científica?",
+	  "options": [
+		"Métodos de coleta de dados",
+		"Teoria da evolução",
+		"História da arte",
+		"Políticas públicas"
+	  ],
+	  "correct_option_index": 0
+	},
+	{
+	  "question": "Qual é uma das competências desenvolvidas no curso de Iniciação Científica?",
+	  "options": [
+		"Formulação de hipóteses",
+		"Interpretação de textos literários",
+		"Solução de problemas matemáticos",
+		"Criação de projetos de engenharia"
+	  ],
+	  "correct_option_index": 0
+	},
+	{
+	  "question": "Qual atividade prática é comum na Iniciação Científica?",
+	  "options": [
+		"Redação de artigos científicos",
+		"Composição musical",
+		"Desenho técnico",
+		"Dança contemporânea"
+	  ],
+	  "correct_option_index": 0
+	}
   ]
 }

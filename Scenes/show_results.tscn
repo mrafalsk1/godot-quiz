@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bi56savh3royf"]
+[gd_scene load_steps=8 format=3 uid="uid://bi56savh3royf"]
 
 [ext_resource type="Script" path="res://Scripts/show_results.gd" id="1_a0j43"]
 [ext_resource type="Texture2D" uid="uid://b8g8bblfndv3a" path="res://Backgrounds/Classroom 2.png" id="2_bnw57"]
 [ext_resource type="FontFile" uid="uid://bqqrogkkr1kan" path="res://assets/fontes/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf" id="3_d8cuf"]
+[ext_resource type="Theme" uid="uid://ce5eht0u23eis" path="res://assets/tema-opcao-questao/menu.tres" id="4_g7ofu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbh6n"]
 content_margin_left = 10.0
@@ -79,10 +80,11 @@ anchor_left = 0.24
 anchor_top = 0.33
 anchor_right = 0.365
 anchor_bottom = 0.384
-offset_left = 190.52
+offset_left = 162.52
 offset_top = 204.16
-offset_right = 179.52
-offset_bottom = 204.168
+offset_right = 270.52
+offset_bottom = 247.168
+theme = ExtResource("4_g7ofu")
 text = "Continuar"
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_continue_button_pressed"]
