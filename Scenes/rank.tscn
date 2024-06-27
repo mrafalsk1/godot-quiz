@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bfat7nxjrbs7u"]
+[gd_scene load_steps=14 format=3 uid="uid://bfat7nxjrbs7u"]
 
 [ext_resource type="Script" path="res://Scripts/rank.gd" id="1_1bp2b"]
 [ext_resource type="Texture2D" uid="uid://calch3fdcrwct" path="res://Backgrounds/novo-cenário.jpg" id="2_60jwv"]
@@ -46,6 +46,49 @@ outline_color = Color(0.653667, 0.400088, 0.213852, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hn60"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jse8"]
+bg_color = Color(0.670588, 0.454902, 0.278431, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.560784, 0.309804, 0.219608, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edvu3"]
+bg_color = Color(0.811765, 0.521569, 0.313726, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.717647, 0.364706, 0.254902, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
+shadow_color = Color(0.0901961, 0.196078, 0.196078, 0.6)
+shadow_size = 4
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppbhe"]
+bg_color = Color(0.811765, 0.521569, 0.313726, 1)
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.560784, 0.309804, 0.219608, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 1
+
+[sub_resource type="Theme" id="Theme_hq4tu"]
+default_font_size = 20
+Button/colors/font_color = Color(0.929412, 0.92549, 0.862745, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_3jse8")
+Button/styles/normal = SubResource("StyleBoxFlat_edvu3")
+Button/styles/pressed = SubResource("StyleBoxFlat_ppbhe")
+
 [node name="Rank" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -66,17 +109,14 @@ expand_mode = 3
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -351.0
-offset_top = -262.0
-offset_right = 351.0
-offset_bottom = 262.0
+offset_left = -350.0
+offset_top = 15.0
+offset_right = 352.0
+offset_bottom = 539.0
 grow_horizontal = 2
-grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_yudwy")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
@@ -362,3 +402,15 @@ text = "200
 label_settings = SubResource("LabelSettings_sw8r3")
 horizontal_alignment = 2
 vertical_alignment = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 552.0
+offset_right = 458.0
+offset_bottom = 631.0
+theme = SubResource("Theme_hq4tu")
+theme_override_font_sizes/font_size = 28
+text = "Voltar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

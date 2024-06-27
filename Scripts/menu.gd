@@ -1,7 +1,7 @@
 extends Control
-const RANK = preload("res://Scenes/rank.tscn")
-const timeline = preload("res://Scenes/timeline_manager.tscn")
-const game = preload("res://Scenes/game.tscn")
+#const RANK = preload("res://Scenes/rank.tscn")
+#const timeline = preload("res://Scenes/timeline_manager.tscn")
+#const game = preload("res://Scenes/game.tscn")
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/game.tscn")
@@ -9,3 +9,8 @@ func _on_button_pressed():
 
 func _on_rank_button_pressed():
 	get_tree().change_scene_to_file("res://Scenes/rank.tscn")
+
+
+func _on_sair_pressed():
+	get_tree().quit()
+	pass # Replace with function body.

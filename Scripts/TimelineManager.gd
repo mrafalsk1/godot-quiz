@@ -36,7 +36,8 @@ func _on_dialogic_signal_event(argument: String):
 		print("next_quiz")
 		_on_next_quiz()
 	if argument == "end_game":
-		get_tree().quit()
+		Dialogic.VAR.count_elective = 0
+		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
 
 
 
